@@ -1,0 +1,69 @@
+name: Daily Dataset Update
+
+on:
+  schedule:
+    # Run every day at 8:00 AM UTC (adjust as needed)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Allow manual triggering
+    
+jobs:
+  update-dataset:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y wget gnupg unzip
+        
+    - name: Install Chrome
+      run: |
+        wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+        echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+        sudo apt-get update
+        sudo apt-get install -y google-chrome-stable
+        
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Run daily update script
+      run: |
+        python scripts/daily_update.py
+        
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
+        
+    - name: Commit and push changes
+      if: steps.git-check.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/*.csv
+        git commit -m "Daily dataset update - $(date +'%Y-%m-%d')"
+        git push
+        
+    - name: Create summary
+      run: |
+        echo "## Daily Update Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Date**: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "- **Status**: Update completed" >> $GITHUB_STEP_SUMMARY
+        if [ -f "data/Dollar_Rial_Price_Dataset.csv" ]; then
+          TOTAL_RECORDS=$(tail -n +2 data/Dollar_Rial_Price_Dataset.csv | wc -l)
+          LAST_DATE=$(tail -n 1 data/Dollar_Rial_Price_Dataset.csv | cut -d',' -f1 | tr -d '"')
+          echo "- **Total Records**: $TOTAL_RECORDS" >> $GITHUB_STEP_SUMMARY
+          echo "- **Latest Date**: $LAST_DATE" >> $GITHUB_STEP_SUMMARY
+        fi
