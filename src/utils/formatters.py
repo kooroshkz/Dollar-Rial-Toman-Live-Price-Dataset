@@ -75,6 +75,32 @@ class DataValidator:
             return False
     
     @staticmethod
+    def is_valid_date(date_str: str) -> bool:
+        """Check if date is valid and not in the impossible future"""
+        try:
+            date_obj = datetime.strptime(date_str, DATE_FORMAT_INPUT)
+            current_date = datetime.now()
+            
+            # Allow dates up to current date, but reject impossible future dates
+            # Add a small buffer for timezone differences (1 day)
+            max_allowed_date = current_date.replace(hour=23, minute=59, second=59)
+            
+            if date_obj > max_allowed_date:
+                print(f"Rejecting invalid future date: {date_str} (parsed as {date_obj.strftime('%Y-%m-%d')})")
+                return False
+            
+            # Additional check: reject dates that are exactly today unless it's early in the day
+            # Since market data is usually available the next day
+            if date_obj.date() == current_date.date():
+                print(f"Rejecting same-day date (market data not yet available): {date_str}")
+                return False
+                
+            return True
+        except ValueError as e:
+            print(f"Error parsing date {date_str}: {str(e)}")
+            return False
+    
+    @staticmethod
     def should_stop_scraping(row_date_str: str, last_existing_date: Optional[datetime]) -> bool:
         """Check if we should stop scraping based on the date"""
         if not last_existing_date:

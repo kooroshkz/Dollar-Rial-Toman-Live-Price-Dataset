@@ -108,7 +108,6 @@ Pipeline Summary:
         """Clean up resources"""
         try:
             self.web_scraper.close()
-            print("Resources cleaned up successfully")
         except Exception as e:
             print(f"Error during cleanup: {str(e)}")
 

@@ -78,6 +78,10 @@ class TGJUWebScraper:
                 if len(cells) >= 8:
                     row_date_str = cells[6].text.strip()
                     
+                    # Skip invalid/future dates
+                    if not DataValidator.is_valid_date(row_date_str):
+                        continue
+                    
                     # Check if we should stop scraping
                     if DataValidator.should_stop_scraping(row_date_str, last_existing_date):
                         should_stop = True

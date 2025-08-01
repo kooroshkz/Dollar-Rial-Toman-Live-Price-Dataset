@@ -12,7 +12,7 @@ from config.settings import (
     PRICE_COLUMNS, OUTPUT_COLUMNS, TOMAN_CONVERSION_RATE,
     DEFAULT_RIAL_OUTPUT, DEFAULT_TOMAN_OUTPUT
 )
-from src.utils.formatters import DateFormatter
+from src.utils.formatters import DateFormatter, DataValidator
 
 
 class DataProcessor:
@@ -59,6 +59,41 @@ class DataProcessor:
         
         return combined_df
     
+    def _filter_valid_dates(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Filter out invalid future dates from the DataFrame"""
+        from datetime import datetime
+        
+        print("Filtering out invalid future dates...")
+        original_count = len(df)
+        
+        # Convert dates to YYYY/MM/DD format for validation
+        valid_rows = []
+        invalid_count = 0
+        
+        for _, row in df.iterrows():
+            try:
+                # Convert DD/MM/YYYY to YYYY/MM/DD for validation
+                date_parts = row['Date'].split('/')
+                if len(date_parts) == 3:
+                    day, month, year = date_parts
+                    validation_date_str = f"{year}/{month.zfill(2)}/{day.zfill(2)}"
+                    
+                    if DataValidator.is_valid_date(validation_date_str):
+                        valid_rows.append(row)
+                    else:
+                        invalid_count += 1
+                else:
+                    # If date format is wrong, skip this row
+                    invalid_count += 1
+            except Exception as e:
+                print(f"Error processing row date {row['Date']}: {e}")
+                invalid_count += 1
+        
+        if invalid_count > 0:
+            print(f"Filtered out {invalid_count} records with invalid dates")
+        
+        return pd.DataFrame(valid_rows) if valid_rows else pd.DataFrame()
+    
     def combine_and_save_data(self, 
                              existing_df: pd.DataFrame, 
                              scraped_data: List[Dict], 
@@ -79,6 +114,13 @@ class DataProcessor:
                 combined_df = self._sort_combined_data(combined_df)
             else:
                 combined_df = existing_clean
+            
+            # Filter out invalid future dates
+            combined_df = self._filter_valid_dates(combined_df)
+            
+            if combined_df.empty:
+                print("No valid data to save after filtering")
+                return None
             
             # Save to CSV
             combined_df.to_csv(filename, index=False, quoting=csv.QUOTE_NONNUMERIC)
