@@ -1,4 +1,10 @@
+# Web scraping dependencies
 selenium==4.15.0
 webdriver-manager==4.0.1
-datasets>=4.0.0
+
+# Data processing dependencies
 pandas>=1.3.0
+datasets>=4.0.0
+
+# Additional utilities
+pathlib2>=2.3.0; python_version < '3.4'

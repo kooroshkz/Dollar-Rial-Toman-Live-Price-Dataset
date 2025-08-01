@@ -1,0 +1,3 @@
+"""
+Scraper package initialization
+"""

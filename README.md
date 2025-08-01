@@ -10,6 +10,33 @@ Daily updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR). His
 - **Update Frequency**: Can be updated daily using the scraper
 - **Format**: CSV with proper indexing and date formatting
 
+## Project Structure
+
+```
+Dollar-Rial-Toman-Live-Price-Dataset/
+├── main.py                     # Main orchestrator script
+├── test_modules.py            # Module testing script
+├── requirements.txt           # Python dependencies
+├── README.md                 # This file
+├── LICENSE                   # MIT License
+├── config/                   # Configuration settings
+│   ├── __init__.py
+│   └── settings.py          # All configuration constants
+├── src/                     # Source code
+│   ├── __init__.py
+│   ├── data/               # Data processing modules
+│   │   ├── __init__.py
+│   │   ├── dataset_manager.py  # Hugging Face dataset handling
+│   │   └── processor.py        # Data processing and CSV operations
+│   ├── scraper/           # Web scraping modules
+│   │   ├── __init__.py
+│   │   └── web_scraper.py     # TGJU.org scraping logic
+│   └── utils/             # Utility functions
+│       ├── __init__.py
+│       └── formatters.py      # Date formatting and validation
+└── data/                  # Output directory for CSV files
+```
+
 ## Data Structure
 
 | Column | Description | Example |
@@ -23,26 +50,66 @@ Daily updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR). His
 
 ## Quick Start
 
-### Load the Dataset
+### Installation
 
+1. Clone the repository:
+```bash
+git clone https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset.git
+cd Dollar-Rial-Toman-Live-Price-Dataset
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# or
+.venv\Scripts\activate     # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### Usage
+
+#### Test the modular structure:
+```bash
+python test_modules.py
+```
+
+#### Run the scraper:
+```bash
+python main.py
+```
+
+#### Load the dataset in Python:
 ```python
 import pandas as pd
 
-# Load the dataset
-df = pd.read_csv('Dollar_Rial_Price_Dataset.csv')
-```
-### Scrape Locally
+# Load Rial dataset
+rial_df = pd.read_csv('Dollar_Rial_Price_Dataset.csv')
 
-Activate virtual environment:
-```bash
-source .venv/bin/activate  # Linux/Mac
-venv\Scripts\activate  # Windows
+# Load Toman dataset  
+toman_df = pd.read_csv('Dollar_Toman_Price_Dataset.csv')
 ```
 
-Run the scraper to get the latest prices:
-```bash
-python dollar_rial_scraper.py
-```
+## Features
+
+- **Modular Architecture**: Clean separation of concerns with dedicated modules
+- **Robust Error Handling**: Comprehensive exception handling and validation
+- **Configurable Settings**: Centralized configuration management
+- **Data Validation**: Built-in data integrity checks
+- **Automatic Conversion**: Generates both Rial and Toman datasets
+- **Resume Capability**: Only scrapes new data since last update
+
+## Configuration
+
+All settings can be customized in `config/settings.py`:
+
+- Web scraping parameters (timeouts, delays, Chrome options)
+- Dataset settings (Hugging Face repository, output filenames)
+- Data processing settings (date formats, conversion rates)
 
 ## License
 
