@@ -24,8 +24,8 @@ CHROME_OPTIONS = [
 
 # Dataset settings
 HUGGINGFACE_DATASET = "mohammadtaghizadeh/Dollar_Rial_Price_Dataset"
-DEFAULT_RIAL_OUTPUT = "Dollar_Rial_Price_Dataset.csv"
-DEFAULT_TOMAN_OUTPUT = "Dollar_Toman_Price_Dataset.csv"
+DEFAULT_RIAL_OUTPUT = "data/Dollar_Rial_Price_Dataset.csv"
+DEFAULT_TOMAN_OUTPUT = "data/Dollar_Toman_Price_Dataset.csv"
 
 # Data processing settings
 DATE_FORMAT_INPUT = "%Y/%m/%d"

@@ -14,8 +14,7 @@ Daily updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR). His
 
 ```
 Dollar-Rial-Toman-Live-Price-Dataset/
-├── main.py                     # Main orchestrator script
-├── test_modules.py            # Module testing script
+├── main.py                     # Main script
 ├── requirements.txt           # Python dependencies
 ├── README.md                 # This file
 ├── LICENSE                   # MIT License
@@ -34,7 +33,15 @@ Dollar-Rial-Toman-Live-Price-Dataset/
 │   └── utils/             # Utility functions
 │       ├── __init__.py
 │       └── formatters.py      # Date formatting and validation
-└── data/                  # Output directory for CSV files
+├── data/                  # Output directory for CSV files
+│   ├── Dollar_Rial_Price_Dataset.csv
+│   └── Dollar_Toman_Price_Dataset.csv
+└── test/                  # Unit and integration tests
+    ├── test_modules.py
+    ├── test_data_processing.py
+    ├── test_integration.py
+    ├── run_tests.py
+    └── README.md
 ```
 
 ## Data Structure
@@ -73,11 +80,6 @@ pip install -r requirements.txt
 
 ### Usage
 
-#### Test the modular structure:
-```bash
-python test_modules.py
-```
-
 #### Run the scraper:
 ```bash
 python main.py
@@ -88,10 +90,10 @@ python main.py
 import pandas as pd
 
 # Load Rial dataset
-rial_df = pd.read_csv('Dollar_Rial_Price_Dataset.csv')
+rial_df = pd.read_csv('data/Dollar_Rial_Price_Dataset.csv')
 
 # Load Toman dataset  
-toman_df = pd.read_csv('Dollar_Toman_Price_Dataset.csv')
+toman_df = pd.read_csv('data/Dollar_Toman_Price_Dataset.csv')
 ```
 
 ## Features
