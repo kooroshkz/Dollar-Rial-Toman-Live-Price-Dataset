@@ -1,22 +1,26 @@
-# GitHub Pages Website
+# Documentation
 
 This directory contains the GitHub Pages website for the Dollar-Rial-Toman Live Price Dataset.
 
-## Features
+## Website Features
 
-- 📈 **Interactive Charts**: Candlestick, line, and area charts using TradingView Lightweight Charts
-- 📊 **Live Data**: Automatically loads data from the GitHub repository
-- 📱 **Responsive Design**: Works on desktop, tablet, and mobile devices
-- 🎨 **Modern UI**: Beautiful gradient design with glassmorphism effects
-- 📋 **Recent Data Table**: Shows the latest exchange rates
-- 📁 **Direct Downloads**: Links to CSV files
-- 🔄 **Auto-updates**: Data refreshes when the CSV files are updated
+- **Interactive Charts**: Candlestick, line, and area charts using TradingView Lightweight Charts
+- **Live Data**: Automatically loads data from the GitHub repository
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional design
+- **Recent Data Table**: Shows the latest exchange rates
+- **Direct Downloads**: Links to CSV files
+- **Auto-updates**: Data refreshes when the CSV files are updated
 
 ## Files
 
 - `index.html` - Main HTML page
 - `styles.css` - CSS styles and responsive design
 - `script.js` - JavaScript for charts and data loading
+
+## Project Documentation
+
+For technical implementation details, see [TECHNICAL.md](../TECHNICAL.md) in the root directory.
 
 ## Data Source
 

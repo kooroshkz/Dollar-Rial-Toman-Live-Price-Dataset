@@ -1,10 +1,44 @@
-# Update Scripts Documentation
+# Technical Documentation
 
-This directory contains scripts for updating the Dollar-Rial-Toman Price Dataset with the latest exchange rate data from TGJU.org.
+This document provides technical details for developers who want to understand the implementation, contribute to the project, or run the scraping scripts locally.
 
-## Scripts Overview
+## Project Architecture
 
-### 1. `daily_update.py` - Automated Daily Updates
+### Directory Structure
+```
+Dollar-Rial-Toman-Live-Price-Dataset/
+├── main.py                     # Main orchestrator script
+├── requirements.txt           # Python dependencies
+├── config/                    # Configuration settings
+│   ├── __init__.py
+│   └── settings.py           # All configuration constants
+├── src/                      # Source code modules
+│   ├── data/                 # Data processing modules
+│   │   ├── dataset_manager.py  # Dataset handling
+│   │   └── processor.py        # CSV operations
+│   ├── scraper/              # Web scraping modules
+│   │   └── web_scraper.py      # TGJU.org scraping logic
+│   └── utils/                # Utility functions
+│       └── formatters.py       # Date formatting and validation
+├── scripts/                  # Update scripts
+│   ├── daily_update.py        # Automated daily updates
+│   └── manual_update.py       # Manual update with options
+├── data/                     # Output CSV files
+│   ├── Dollar_Rial_Price_Dataset.csv
+│   └── Dollar_Toman_Price_Dataset.csv
+├── test/                     # Test suites
+│   ├── test_daily_update.py   # Test daily update functionality
+│   ├── test_modules.py        # Unit tests for modules
+│   ├── test_data_processing.py # Data processing tests
+│   ├── test_integration.py    # Integration tests
+│   └── run_tests.py           # Test runner
+└── .github/workflows/        # GitHub Actions
+    └── daily-update.yml       # Automated daily update workflow
+```
+
+## Update Scripts
+
+### 1. `scripts/daily_update.py` - Automated Daily Updates
 
 **Purpose**: Lightweight script designed to run daily via GitHub Actions to check for new records.
 
@@ -16,10 +50,10 @@ This directory contains scripts for updating the Dollar-Rial-Toman Price Dataset
 
 **Usage**:
 ```bash
-python daily_update.py
+python scripts/daily_update.py
 ```
 
-### 2. `manual_update.py` - Manual Updates with Options
+### 2. `scripts/manual_update.py` - Manual Updates with Options
 
 **Purpose**: Provides more control for manual updates with various options.
 
@@ -32,19 +66,19 @@ python daily_update.py
 **Usage**:
 ```bash
 # Basic manual update (check 10 records)
-python manual_update.py
+python scripts/manual_update.py
 
 # Check more records
-python manual_update.py --records 20
+python scripts/manual_update.py --records 20
 
 # Dry run to see what would be updated
-python manual_update.py --dry-run
+python scripts/manual_update.py --dry-run
 
 # Quick update (same as daily update)
-python manual_update.py --quick
+python scripts/manual_update.py --quick
 
 # Combine options
-python manual_update.py --records 15 --dry-run
+python scripts/manual_update.py --records 15 --dry-run
 ```
 
 **Arguments**:
@@ -52,7 +86,7 @@ python manual_update.py --records 15 --dry-run
 - `--dry-run, -d`: Show what would be updated without making changes
 - `--quick, -q`: Quick update - check only 3 records
 
-### 3. `test_daily_update.py` - Test Script
+### 3. `test/test_daily_update.py` - Test Script
 
 **Purpose**: Test the daily update functionality without modifying actual CSV files.
 
@@ -64,8 +98,39 @@ python manual_update.py --records 15 --dry-run
 
 **Usage**:
 ```bash
-python test_daily_update.py
+python test/test_daily_update.py
 ```
+
+## Development Setup
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset.git
+cd Dollar-Rial-Toman-Live-Price-Dataset
+```
+
+2. Create and activate a virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# or
+.venv\Scripts\activate     # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+### Dependencies
+
+Key dependencies:
+- `selenium` - Web scraping
+- `webdriver-manager` - Chrome driver management  
+- `pandas` - Data processing
+- `requests` - HTTP requests
 
 ## GitHub Actions Workflow
 
@@ -104,18 +169,6 @@ Both CSV files maintain the same structure:
 "31/07/2025","1404/05/09","896,100","895,700","908,850","905,600"
 ```
 
-## Dependencies
-
-Make sure all required packages are installed:
-```bash
-pip install -r requirements.txt
-```
-
-Key dependencies:
-- `selenium` - Web scraping
-- `webdriver-manager` - Chrome driver management  
-- `pandas` - Data processing
-
 ## Error Handling
 
 All scripts include comprehensive error handling:
@@ -125,21 +178,26 @@ All scripts include comprehensive error handling:
 - File I/O errors
 - Invalid date formats
 
+## Testing
+
+### Local Testing:
+```bash
+# Test before deploying
+python test/test_daily_update.py
+
+# Manual dry run
+python scripts/manual_update.py --dry-run
+
+# Run all tests
+python test/run_tests.py
+```
+
 ## Monitoring
 
 ### GitHub Actions:
 - Check the Actions tab in your GitHub repository
 - View workflow run logs and summaries
 - Monitor for failures and alerts
-
-### Local Testing:
-```bash
-# Test before deploying
-python test_daily_update.py
-
-# Manual dry run
-python manual_update.py --dry-run
-```
 
 ## Customization
 
@@ -152,13 +210,21 @@ schedule:
 ```
 
 ### Records to Check:
-Modify `daily_update.py` to check more records:
+Modify `scripts/daily_update.py` to check more records:
 ```python
 website_records = scraper.get_latest_records(count=5)  # Check 5 instead of 3
 ```
 
 ### Time Zone:
 The workflow runs in UTC. Adjust the cron schedule according to your preferred local time.
+
+## Configuration
+
+All settings can be customized in `config/settings.py`:
+
+- Web scraping parameters (timeouts, delays, Chrome options)
+- Dataset settings (output filenames, paths)
+- Data processing settings (date formats, conversion rates)
 
 ## Troubleshooting
 
@@ -192,7 +258,14 @@ Add verbose logging by modifying the scripts to include more print statements or
 ## Contributing
 
 When modifying the update scripts:
-1. Test with `test_daily_update.py` first
-2. Use `manual_update.py --dry-run` to preview changes
+1. Test with `test/test_daily_update.py` first
+2. Use `scripts/manual_update.py --dry-run` to preview changes
 3. Verify both Rial and Toman datasets are updated correctly
 4. Check that date formats remain consistent
+5. Run the full test suite before submitting changes
+
+### Code Style
+- Follow PEP 8 guidelines
+- Include docstrings for all functions and classes
+- Add type hints where appropriate
+- Maintain comprehensive error handling

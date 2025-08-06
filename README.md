@@ -1,91 +1,45 @@
 # Dollar-Rial-Toman Live Price Dataset
 
-Daily updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR). Historical and live prices from November 2011 to present, handy for financial analysis, forecasting, and machine learning projects.
+A comprehensive, daily-updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR) with historical data from November 2011 to present. This dataset is ideal for financial analysis, economic research, forecasting, and machine learning projects.
 
 ## Dataset Overview
 
-- **Time Period**: November 27, 2011 - July 31, 2025
+- **Time Period**: November 27, 2011 - Present (continuously updated)
 - **Total Records**: 3,900+ daily price points
 - **Data Source**: TGJU.org (Tehran Gold & Jewelry Union)
-- **Update Frequency**: Can be updated daily using the scraper
-- **Format**: CSV with proper indexing and date formatting
+- **Update Frequency**: Daily (automated via GitHub Actions)
+- **Format**: CSV with proper date formatting and price structure
+- **Currencies**: Both Iranian Rial (IRR) and Toman datasets available
 
-## Project Structure
+## Data Files
 
-```
-Dollar-Rial-Toman-Live-Price-Dataset/
-├── main.py                     # Main script
-├── requirements.txt           # Python dependencies
-├── README.md                 # This file
-├── LICENSE                   # MIT License
-├── config/                   # Configuration settings
-│   ├── __init__.py
-│   └── settings.py          # All configuration constants
-├── src/                     # Source code
-│   ├── __init__.py
-│   ├── data/               # Data processing modules
-│   │   ├── __init__.py
-│   │   ├── dataset_manager.py  # Hugging Face dataset handling
-│   │   └── processor.py        # Data processing and CSV operations
-│   ├── scraper/           # Web scraping modules
-│   │   ├── __init__.py
-│   │   └── web_scraper.py     # TGJU.org scraping logic
-│   └── utils/             # Utility functions
-│       ├── __init__.py
-│       └── formatters.py      # Date formatting and validation
-├── data/                  # Output directory for CSV files
-│   ├── Dollar_Rial_Price_Dataset.csv
-│   └── Dollar_Toman_Price_Dataset.csv
-└── test/                  # Unit and integration tests
-    ├── test_modules.py
-    ├── test_data_processing.py
-    ├── test_integration.py
-    ├── run_tests.py
-    └── README.md
-```
+### Dollar_Rial_Price_Dataset.csv
+Contains exchange rates in Iranian Rials (official currency)
+
+### Dollar_Toman_Price_Dataset.csv  
+Contains exchange rates in Iranian Tomans (1 Toman = 10 Rials)
 
 ## Data Structure
 
-| Column | Description | Example |
-|--------|-------------|---------|
-| Date | Gregorian date (DD/MM/YYYY) | 07/31/2025 |
-| Persian_Date | Persian/Shamsi date | 1404/05/09 |
-| Open | Opening price in Rials | "896,100" |
-| Low | Lowest price of the day | "895,700" |
-| High | Highest price of the day | "908,850" |
-| Close | Closing price in Rials | "905,600" |
+Each CSV file contains the following columns:
 
-## Quick Start
+| Column | Description | Format | Example |
+|--------|-------------|--------|---------|
+| Date | Gregorian date | DD/MM/YYYY | "31/07/2025" |
+| Persian_Date | Persian/Shamsi date | YYYY/MM/DD | "1404/05/09" |
+| Open | Opening price | Formatted number | "896,100" |
+| Low | Lowest price of the day | Formatted number | "895,700" |
+| High | Highest price of the day | Formatted number | "908,850" |
+| Close | Closing price | Formatted number | "905,600" |
 
-### Installation
+## Using the Dataset
 
-1. Clone the repository:
-```bash
-git clone https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset.git
-cd Dollar-Rial-Toman-Live-Price-Dataset
-```
+### Download the Data
+You can access the dataset files directly from the `/data/` directory:
+- [Dollar_Rial_Price_Dataset.csv](data/Dollar_Rial_Price_Dataset.csv)
+- [Dollar_Toman_Price_Dataset.csv](data/Dollar_Toman_Price_Dataset.csv)
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Linux/Mac
-# or
-.venv\Scripts\activate     # Windows
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### Usage
-
-#### Run the scraper:
-```bash
-python main.py
-```
-
-#### Load the dataset in Python:
+### Loading in Python
 ```python
 import pandas as pd
 
@@ -94,29 +48,91 @@ rial_df = pd.read_csv('data/Dollar_Rial_Price_Dataset.csv')
 
 # Load Toman dataset  
 toman_df = pd.read_csv('data/Dollar_Toman_Price_Dataset.csv')
+
+# Convert date column to datetime
+rial_df['Date'] = pd.to_datetime(rial_df['Date'], format='%d/%m/%Y')
+
+# Remove commas from price columns and convert to numeric
+price_columns = ['Open', 'Low', 'High', 'Close']
+for col in price_columns:
+    rial_df[col] = pd.to_numeric(rial_df[col].str.replace(',', ''))
 ```
 
-## Features
+### Loading in R
+```r
+# Load Rial dataset
+rial_data <- read.csv("data/Dollar_Rial_Price_Dataset.csv", stringsAsFactors = FALSE)
 
-- **Modular Architecture**: Clean separation of concerns with dedicated modules
-- **Robust Error Handling**: Comprehensive exception handling and validation
-- **Configurable Settings**: Centralized configuration management
-- **Data Validation**: Built-in data integrity checks
-- **Automatic Conversion**: Generates both Rial and Toman datasets
-- **Resume Capability**: Only scrapes new data since last update
+# Load Toman dataset
+toman_data <- read.csv("data/Dollar_Toman_Price_Dataset.csv", stringsAsFactors = FALSE)
 
-## Configuration
+# Convert date column
+rial_data$Date <- as.Date(rial_data$Date, format = "%d/%m/%Y")
+```
 
-All settings can be customized in `config/settings.py`:
+## Data Quality & Updates
 
-- Web scraping parameters (timeouts, delays, Chrome options)
-- Dataset settings (Hugging Face repository, output filenames)
-- Data processing settings (date formats, conversion rates)
+- **Validation**: All price data undergoes validation checks for accuracy
+- **Automated Updates**: Dataset is automatically updated daily at 8:00 AM UTC
+- **Data Integrity**: Built-in duplicate prevention and format validation
+- **Historical Consistency**: Maintains consistent formatting across all time periods
+
+## Technical Implementation
+
+This dataset is maintained using an automated web scraping system that:
+
+- Monitors TGJU.org for new exchange rate data
+- Validates and processes new records
+- Maintains data consistency and prevents duplicates
+- Automatically commits updates to the repository
+
+### Automation Details
+- **Platform**: GitHub Actions
+- **Schedule**: Daily at 8:00 AM UTC
+- **Browser**: Chrome with Selenium WebDriver
+- **Reliability**: Comprehensive error handling and retry logic
+
+## Research Applications
+
+This dataset is suitable for:
+
+- **Financial Analysis**: Track USD/IRR exchange rate trends and volatility
+- **Economic Research**: Study the impact of economic events on currency values  
+- **Machine Learning**: Build predictive models for exchange rate forecasting
+- **Time Series Analysis**: Analyze patterns and seasonal trends
+- **Academic Projects**: Research on emerging market currencies
+
+## Data Formats
+
+### CSV Format
+- **Encoding**: UTF-8
+- **Delimiter**: Comma (,)
+- **Quotes**: Double quotes for all fields
+- **Numbers**: Formatted with commas as thousand separators
+
+### Date Formats
+- **Gregorian**: DD/MM/YYYY (e.g., 31/07/2025)
+- **Persian**: YYYY/MM/DD (e.g., 1404/05/09)
+
+## Contributing
+
+If you find data inconsistencies or have suggestions for improvements, please open an issue in the GitHub repository.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Citation
+
+If you use this dataset in your research or projects, please cite:
+
+```
+Dollar-Rial-Toman Live Price Dataset
+Author: Koorosh Komeili Zadeh
+Source: https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset
+Data Source: TGJU.org (Tehran Gold & Jewelry Union)
+```
+
 ## Disclaimer
 
-This dataset is for educational purposes only. Exchange rates are sourced from public data and validation is recommended by the user.
+This dataset is provided for educational and research purposes only. Exchange rates are sourced from publicly available data and should be independently verified for trading or investment decisions. The authors are not responsible for any financial losses resulting from the use of this data.
