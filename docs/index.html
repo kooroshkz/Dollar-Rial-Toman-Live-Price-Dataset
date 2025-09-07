@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dollar-Rial-Toman Live Price Dataset</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Dollar-Rial-Toman Live Price Dataset</h1>
+            <p class="subtitle">Historical and live USD to IRR/IRT exchange rates from 2011 to present</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalRecords">Loading...</span>
+                    <span class="stat-label">Total Records</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="lastUpdate">Loading...</span>
+                    <span class="stat-label">Last Update</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="currentPrice">Loading...</span>
+                    <span class="stat-label">Current Price (Toman)</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" id="dataRange">2011-Present</span>
+                    <span class="stat-label">Data Range</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Chart Section -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Interactive Price Chart</h2>
+                <div class="chart-controls">
+                    <button class="chart-btn active" data-type="candlestick">Candlestick</button>
+                    <button class="chart-btn" data-type="line">Line Chart</button>
+                    <button class="chart-btn" data-type="area">Area Chart</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div id="chart" class="chart"></div>
+                <div class="chart-loading" id="chartLoading">
+                    <div class="spinner"></div>
+                    <p>Loading chart data...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Data Section -->
+        <section class="data-section">
+            <h2>Recent Exchange Rates</h2>
+            <div class="table-container">
+                <table class="data-table" id="recentDataTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Persian Date</th>
+                            <th>Open</th>
+                            <th>Low</th>
+                            <th>High</th>
+                            <th>Close</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentDataBody">
+                        <tr><td colspan="6" class="loading">Loading recent data...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Dataset Info Section -->
+        <section class="info-section">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>About This Dataset</h3>
+                    <p>This dataset provides comprehensive historical and live exchange rate data for USD to Iranian Rial (IRR) and Toman (IRT) from 2011 to the present day.</p>
+                    <ul>
+                        <li><strong>Source:</strong> TGJU.org (Tehran Gold and Jewelry Union)</li>
+                        <li><strong>Update Frequency:</strong> Daily via automated scraping</li>
+                        <li><strong>Data Points:</strong> Open, Low, High, Close prices</li>
+                        <li><strong>Currencies:</strong> Rial (IRR) and Toman (IRT)</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Data Access</h3>
+                    <div class="download-links">
+                        <a href="https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Rial_Price_Dataset.csv" 
+                           class="download-btn" target="_blank">
+                            Download Rial Dataset (CSV)
+                        </a>
+                        <a href="https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Toman_Price_Dataset.csv" 
+                           class="download-btn" target="_blank">
+                            Download Toman Dataset (CSV)
+                        </a>
+                        <a href="https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset" 
+                           class="download-btn primary" target="_blank">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Technical Details</h3>
+                    <ul>
+                        <li><strong>Format:</strong> CSV with UTF-8 encoding</li>
+                        <li><strong>Date Format:</strong> DD/MM/YYYY</li>
+                        <li><strong>Persian Dates:</strong> Solar Hijri calendar</li>
+                        <li><strong>Toman Conversion:</strong> 1 Toman = 10 Rial</li>
+                        <li><strong>Automation:</strong> GitHub Actions daily updates</li>
+                        <li><strong>License:</strong> Open source</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>
+                    Dataset maintained by <a href="https://github.com/kooroshkz" target="_blank">Koorosh Komeili Zadeh</a> 
+                    | Auto-updated daily 
+                    | Charts powered by <a href="https://www.tradingview.com" target="_blank">TradingView Lightweight Charts</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
