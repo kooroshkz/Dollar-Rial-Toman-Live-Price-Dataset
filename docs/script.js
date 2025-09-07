@@ -1,5 +1,5 @@
 // Configuration
-const DATA_URL = 'https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Toman_Price_Dataset.csv';
+const DATA_URL = 'https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Rial_Price_Dataset.csv';
 
 // Global variables
 let chart;
@@ -115,18 +115,13 @@ function initializeChart() {
     }
 }
 
-// Sample data for testing (will be replaced with real data when deployed to GitHub Pages)
+// Sample data for local preview (matches actual Rial dataset columns)
 const SAMPLE_DATA = [
-    { date: '31/07/2025', persianDate: '1404/05/09', time: '2025-07-31', open: 89000, high: 90885, low: 89570, close: 90560, value: 90560 },
-    { date: '30/07/2025', persianDate: '1404/05/08', time: '2025-07-30', open: 88500, high: 89200, low: 88100, close: 89000, value: 89000 },
-    { date: '29/07/2025', persianDate: '1404/05/07', time: '2025-07-29', open: 87800, high: 88600, low: 87500, close: 88500, value: 88500 },
-    { date: '28/07/2025', persianDate: '1404/05/06', time: '2025-07-28', open: 87200, high: 87900, low: 87000, close: 87800, value: 87800 },
-    { date: '27/07/2025', persianDate: '1404/05/05', time: '2025-07-27', open: 86800, high: 87300, low: 86500, close: 87200, value: 87200 },
-    { date: '26/07/2025', persianDate: '1404/05/04', time: '2025-07-26', open: 86200, high: 86900, low: 86000, close: 86800, value: 86800 },
-    { date: '25/07/2025', persianDate: '1404/05/03', time: '2025-07-25', open: 85800, high: 86300, low: 85500, close: 86200, value: 86200 },
-    { date: '24/07/2025', persianDate: '1404/05/02', time: '2025-07-24', open: 85200, high: 85900, low: 85000, close: 85800, value: 85800 },
-    { date: '23/07/2025', persianDate: '1404/05/01', time: '2025-07-23', open: 84800, high: 85300, low: 84500, close: 85200, value: 85200 },
-    { date: '22/07/2025', persianDate: '1404/04/31', time: '2025-07-22', open: 84200, high: 84900, low: 84000, close: 84800, value: 84800 }
+    { gdate: '2025/09/06', pdate: '1404/06/15', open: 1012100, low: 1011700, high: 1034100, close: 1029800 },
+    { gdate: '2025/09/04', pdate: '1404/06/13', open: 1023900, low: 1014300, high: 1024200, close: 1014400 },
+    { gdate: '2025/09/03', pdate: '1404/06/12', open: 1032700, low: 1023800, high: 1032700, close: 1025700 },
+    { gdate: '2025/09/02', pdate: '1404/06/11', open: 1055700, low: 1031300, high: 1056700, close: 1032000 },
+    { gdate: '2025/08/31', pdate: '1404/06/09', open: 1024900, low: 1024300, high: 1049200, close: 1048300 }
 ];
 
 // Load and process data
@@ -233,32 +228,31 @@ function showDataSourceMessage(message) {
 function parseCSV(csvText) {
     const lines = csvText.trim().split('\n');
     const header = lines[0].split(',').map(col => col.replace(/"/g, ''));
+    // Expected: Open Price,Low Price,High Price,Close Price,Change Amount,Change Percent,Gregorian Date,Persian Date
     const data = [];
-
     for (let i = 1; i < lines.length; i++) {
         const values = parseCSVLine(lines[i]);
-        if (values.length >= 6) {
-            const [date, persianDate, open, low, high, close] = values;
-            
-            // Convert date from DD/MM/YYYY to YYYY-MM-DD for the chart
-            const dateParts = date.split('/');
+        if (values.length >= 8) {
+            const [open, low, high, close, changeAmount, changePercent, gdate, pdate] = values;
+            // Convert date for chart (YYYY/MM/DD to YYYY-MM-DD)
+            const dateParts = gdate.split('/');
             if (dateParts.length === 3) {
-                const chartDate = `${dateParts[2]}-${dateParts[1].padStart(2, '0')}-${dateParts[0].padStart(2, '0')}`;
-                
+                const chartDate = `${dateParts[0]}-${dateParts[1].padStart(2, '0')}-${dateParts[2].padStart(2, '0')}`;
                 data.push({
-                    date: date,
-                    persianDate: persianDate,
+                    gdate: gdate,
+                    pdate: pdate,
                     time: chartDate,
-                    open: parseFloat(open.replace(/,/g, '')),
-                    high: parseFloat(high.replace(/,/g, '')),
-                    low: parseFloat(low.replace(/,/g, '')),
-                    close: parseFloat(close.replace(/,/g, '')),
-                    value: parseFloat(close.replace(/,/g, '')), // For line and area series
+                    open: parseInt(open, 10),
+                    low: parseInt(low, 10),
+                    high: parseInt(high, 10),
+                    close: parseInt(close, 10),
+                    value: parseInt(close, 10),
+                    changeAmount: changeAmount,
+                    changePercent: changePercent
                 });
             }
         }
     }
-
     return data.sort((a, b) => new Date(a.time) - new Date(b.time));
 }
 
@@ -288,12 +282,10 @@ function parseCSVLine(line) {
 // Update statistics
 function updateStatistics(data) {
     if (data.length === 0) return;
-
     const totalRecords = data.length;
     const lastRecord = data[data.length - 1];
     const currentPrice = formatNumber(lastRecord.close);
-    const lastUpdate = lastRecord.date;
-
+    const lastUpdate = lastRecord.gdate;
     document.getElementById('totalRecords').textContent = formatNumber(totalRecords);
     document.getElementById('lastUpdate').textContent = lastUpdate;
     document.getElementById('currentPrice').textContent = currentPrice;
@@ -303,13 +295,12 @@ function updateStatistics(data) {
 function updateRecentDataTable(recentData) {
     const tbody = document.getElementById('recentDataBody');
     tbody.innerHTML = '';
-
     // Reverse to show newest first
     recentData.reverse().forEach(record => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><strong>${record.date}</strong></td>
-            <td>${record.persianDate}</td>
+            <td><strong>${record.gdate}</strong></td>
+            <td>${record.pdate}</td>
             <td>${formatNumber(record.open)}</td>
             <td>${formatNumber(record.low)}</td>
             <td>${formatNumber(record.high)}</td>

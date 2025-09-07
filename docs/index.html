@@ -25,10 +25,10 @@
                 </div>
                 <div class="stat-card">
                     <span class="stat-number" id="currentPrice">Loading...</span>
-                    <span class="stat-label">Current Price (Toman)</span>
+                    <span class="stat-label">Latest Close Price (Rial)</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" id="dataRange">2011-Present</span>
+                    <span class="stat-number" id="dataRange">2011–Present</span>
                     <span class="stat-label">Data Range</span>
                 </div>
             </div>
@@ -60,12 +60,12 @@
                 <table class="data-table" id="recentDataTable">
                     <thead>
                         <tr>
-                            <th>Date</th>
+                            <th>Gregorian Date</th>
                             <th>Persian Date</th>
-                            <th>Open</th>
-                            <th>Low</th>
-                            <th>High</th>
-                            <th>Close</th>
+                            <th>Open Price</th>
+                            <th>Low Price</th>
+                            <th>High Price</th>
+                            <th>Close Price</th>
                         </tr>
                     </thead>
                     <tbody id="recentDataBody">
@@ -80,12 +80,12 @@
             <div class="info-grid">
                 <div class="info-card">
                     <h3>About This Dataset</h3>
-                    <p>This dataset provides comprehensive historical and live exchange rate data for USD to Iranian Rial (IRR) and Toman (IRT) from 2011 to the present day.</p>
+                    <p>This dataset provides comprehensive historical exchange rate data for USD to Iranian Rial (IRR) from 2011 to the present day.</p>
                     <ul>
                         <li><strong>Source:</strong> TGJU.org (Tehran Gold and Jewelry Union)</li>
                         <li><strong>Update Frequency:</strong> Daily via automated scraping</li>
-                        <li><strong>Data Points:</strong> Open, Low, High, Close prices</li>
-                        <li><strong>Currencies:</strong> Rial (IRR) and Toman (IRT)</li>
+                        <li><strong>Data Points:</strong> Open, Low, High, Close prices, Change Amount, Change Percent, Dates</li>
+                        <li><strong>Currency:</strong> Rial (IRR)</li>
                     </ul>
                 </div>
 
@@ -94,11 +94,7 @@
                     <div class="download-links">
                         <a href="https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Rial_Price_Dataset.csv" 
                            class="download-btn" target="_blank">
-                            Download Rial Dataset (CSV)
-                        </a>
-                        <a href="https://raw.githubusercontent.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset/refs/heads/main/data/Dollar_Toman_Price_Dataset.csv" 
-                           class="download-btn" target="_blank">
-                            Download Toman Dataset (CSV)
+                            Download Dataset (CSV)
                         </a>
                         <a href="https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset" 
                            class="download-btn primary" target="_blank">
@@ -111,11 +107,9 @@
                     <h3>Technical Details</h3>
                     <ul>
                         <li><strong>Format:</strong> CSV with UTF-8 encoding</li>
-                        <li><strong>Date Format:</strong> DD/MM/YYYY</li>
-                        <li><strong>Persian Dates:</strong> Solar Hijri calendar</li>
-                        <li><strong>Toman Conversion:</strong> 1 Toman = 10 Rial</li>
+                        <li><strong>Date Format:</strong> YYYY/MM/DD (Gregorian and Persian)</li>
                         <li><strong>Automation:</strong> GitHub Actions daily updates</li>
-                        <li><strong>License:</strong> Open source</li>
+                        <li><strong>License:</strong> MIT</li>
                     </ul>
                 </div>
             </div>
