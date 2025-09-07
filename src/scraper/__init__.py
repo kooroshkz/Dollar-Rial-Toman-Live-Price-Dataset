@@ -1,3 +1,0 @@
-"""
-Scraper package initialization
-"""

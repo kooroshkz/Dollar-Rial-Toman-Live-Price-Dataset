@@ -1,13 +1,19 @@
-name: Daily Dataset Update
+name: Daily USD/IRR Exchange Rate Update
 
 on:
   schedule:
-    # Run every day at 8:00 AM UTC (adjust as needed)
+    # Run daily at 8:00 AM UTC (every day of the week)
     - cron: '0 8 * * *'
   workflow_dispatch: # Allow manual triggering
-    
+    inputs:
+      force_update:
+        description: 'Force full update instead of incremental'
+        required: false
+        default: false
+        type: boolean
+
 jobs:
-  update-dataset:
+  update-exchange-rates:
     runs-on: ubuntu-latest
     
     steps:
@@ -15,55 +21,151 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0  # Fetch full history for proper git operations
         
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+        cache: 'pip'
         
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y wget gnupg unzip
+        sudo apt-get install -y wget gnupg unzip xvfb
         
-    - name: Install Chrome
+    - name: Install Chrome Browser
       run: |
         wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
         echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
         
+    - name: Verify Chrome installation
+      run: |
+        google-chrome --version
+        which google-chrome
+        
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Run daily update script
+    - name: Check current dataset status
       run: |
-        python scripts/daily_update.py
-        
-    - name: Check for changes
-      id: git-check
-      run: |
-        git diff --exit-code || echo "changes=true" >> $GITHUB_OUTPUT
-        
-    - name: Commit and push changes
-      if: steps.git-check.outputs.changes == 'true'
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add data/*.csv
-        git commit -m "Daily dataset update - $(date +'%Y-%m-%d')"
-        git push
-        
-    - name: Create summary
-      run: |
-        echo "## Daily Update Summary" >> $GITHUB_STEP_SUMMARY
-        echo "- **Date**: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-        echo "- **Status**: Update completed" >> $GITHUB_STEP_SUMMARY
+        echo "=== Current Dataset Status ===" 
         if [ -f "data/Dollar_Rial_Price_Dataset.csv" ]; then
           TOTAL_RECORDS=$(tail -n +2 data/Dollar_Rial_Price_Dataset.csv | wc -l)
-          LAST_DATE=$(tail -n 1 data/Dollar_Rial_Price_Dataset.csv | cut -d',' -f1 | tr -d '"')
-          echo "- **Total Records**: $TOTAL_RECORDS" >> $GITHUB_STEP_SUMMARY
-          echo "- **Latest Date**: $LAST_DATE" >> $GITHUB_STEP_SUMMARY
+          LATEST_DATE=$(head -n 2 data/Dollar_Rial_Price_Dataset.csv | tail -n 1 | cut -d',' -f7)
+          echo "Total records: $TOTAL_RECORDS"
+          echo "Latest date: $LATEST_DATE"
+          echo "EXISTING_RECORDS=$TOTAL_RECORDS" >> $GITHUB_ENV
+          echo "LATEST_DATE=$LATEST_DATE" >> $GITHUB_ENV
+        else
+          echo "No existing dataset found - will perform full scrape"
+          echo "EXISTING_RECORDS=0" >> $GITHUB_ENV
+          echo "LATEST_DATE=none" >> $GITHUB_ENV
         fi
+        
+    - name: Run USD/IRR scraper (incremental update)
+      run: |
+        echo "=== Starting USD/IRR Exchange Rate Scraper ===" 
+        echo "Running incremental update to check for new records..."
+        
+        # Set display for headless Chrome
+        export DISPLAY=:99
+        Xvfb :99 -screen 0 1920x1080x24 > /dev/null 2>&1 &
+        
+        # Run the scraper
+        python3 main.py
+        
+    - name: Check for new data
+      id: check-changes
+      run: |
+        echo "=== Checking for Changes ===" 
+        
+        # Check if CSV file exists and has content
+        if [ -f "data/Dollar_Rial_Price_Dataset.csv" ]; then
+          NEW_RECORDS=$(tail -n +2 data/Dollar_Rial_Price_Dataset.csv | wc -l)
+          NEW_LATEST_DATE=$(head -n 2 data/Dollar_Rial_Price_Dataset.csv | tail -n 1 | cut -d',' -f7)
+          
+          echo "Previous records: $EXISTING_RECORDS"
+          echo "New records: $NEW_RECORDS"
+          echo "Previous latest date: $LATEST_DATE"  
+          echo "New latest date: $NEW_LATEST_DATE"
+          
+          if [ "$NEW_RECORDS" -gt "$EXISTING_RECORDS" ] || [ "$NEW_LATEST_DATE" != "$LATEST_DATE" ]; then
+            echo "New data detected!"
+            echo "CHANGES_DETECTED=true" >> $GITHUB_OUTPUT
+            echo "NEW_RECORD_COUNT=$NEW_RECORDS" >> $GITHUB_OUTPUT
+            echo "ADDED_RECORDS=$((NEW_RECORDS - EXISTING_RECORDS))" >> $GITHUB_OUTPUT
+            echo "LATEST_ENTRY_DATE=$NEW_LATEST_DATE" >> $GITHUB_OUTPUT
+          else
+            echo "No new data found"
+            echo "CHANGES_DETECTED=false" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "Error: CSV file not found after scraping"
+          exit 1
+        fi
+        
+    - name: Commit and push changes
+      if: steps.check-changes.outputs.CHANGES_DETECTED == 'true'
+      run: |
+        echo "=== Committing New Data ===" 
+        
+        # Configure git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action - Daily Update"
+        
+        # Add the updated CSV file
+        git add data/Dollar_Rial_Price_Dataset.csv
+        
+        # Create commit message with details
+        COMMIT_MSG="Daily dataset update - $(date +'%Y-%m-%d')
+
+        Added ${{ steps.check-changes.outputs.ADDED_RECORDS }} new records
+        Latest entry: ${{ steps.check-changes.outputs.LATEST_ENTRY_DATE }}
+        Total records: ${{ steps.check-changes.outputs.NEW_RECORD_COUNT }}
+        
+        Auto-updated by GitHub Actions"
+        
+        git commit -m "$COMMIT_MSG"
+        git push
+        
+    - name: Create update summary
+      run: |
+        echo "## Daily USD/IRR Exchange Rate Update" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Date**: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "**Status**: Update completed successfully" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ steps.check-changes.outputs.CHANGES_DETECTED }}" == "true" ]; then
+          echo "### New Data Found!" >> $GITHUB_STEP_SUMMARY
+          echo "- **Records Added**: ${{ steps.check-changes.outputs.ADDED_RECORDS }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total Records**: ${{ steps.check-changes.outputs.NEW_RECORD_COUNT }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Latest Entry**: ${{ steps.check-changes.outputs.LATEST_ENTRY_DATE }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data Source**: [tgju.org](https://www.tgju.org/profile/price_dollar_rl/history)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "### No New Data" >> $GITHUB_STEP_SUMMARY
+          echo "No new exchange rate records were found since the last update." >> $GITHUB_STEP_SUMMARY
+          echo "The dataset remains current with **$EXISTING_RECORDS** total records." >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Dataset Information" >> $GITHUB_STEP_SUMMARY
+        echo "- **File**: \`data/Dollar_Rial_Price_Dataset.csv\`" >> $GITHUB_STEP_SUMMARY
+        echo "- **Format**: Open, Low, High, Close prices (integers)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Date Range**: 2011-11-26 to $(date +'%Y-%m-%d')" >> $GITHUB_STEP_SUMMARY
+        echo "- **Update Schedule**: Daily at 8:00 AM UTC (except Fridays)" >> $GITHUB_STEP_SUMMARY
+        
+    - name: Upload logs as artifact (on failure)
+      if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: scraper-logs-${{ github.run_number }}
+        path: |
+          scraper.log
+          *.log
+        retention-days: 7

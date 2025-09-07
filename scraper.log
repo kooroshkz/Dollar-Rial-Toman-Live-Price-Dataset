@@ -1,0 +1,1529 @@
+2025-09-07 16:02:21,080 - INFO - No existing data file found. Starting fresh.
+2025-09-07 16:02:21,081 - INFO - No existing data found. Starting full scrape...
+2025-09-07 16:02:21,081 - INFO - Starting dollar scraper...
+2025-09-07 16:02:21,081 - INFO - Setting up Chrome driver...
+2025-09-07 16:02:21,081 - INFO - ====== WebDriver manager ======
+2025-09-07 16:02:24,207 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:24,259 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:24,296 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:24,383 - INFO - WebDriver version 140.0.7339.80 selected
+2025-09-07 16:02:24,385 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.80/mac-arm64/chromedriver-mac-arm64.zip
+2025-09-07 16:02:24,385 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/140.0.7339.80/mac-arm64/chromedriver-mac-arm64.zip
+2025-09-07 16:02:24,542 - INFO - Driver downloading response is 200
+2025-09-07 16:02:24,750 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:24,834 - INFO - Driver has been saved in cache [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80]
+2025-09-07 16:02:26,913 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 16:02:30,336 - INFO - Total records available: 3648
+2025-09-07 16:02:30,336 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 16:02:30,342 - INFO - Found 30 rows on current page
+2025-09-07 16:02:30,374 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1012100.0, 'Low Price (کمترین)': 1011700.0, 'High Price (بیشترین)': 1034100.0, 'Close Price (پایانی)': 1029800.0, 'Change Amount (میزان تغییر)': '15400', 'Change Percent (درصد تغییر)': '1.52%', 'Gregorian Date': '2025/09/06', 'Persian Date': '1404/06/15'}
+2025-09-07 16:02:30,398 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1023900.0, 'Low Price (کمترین)': 1014300.0, 'High Price (بیشترین)': 1024200.0, 'Close Price (پایانی)': 1014400.0, 'Change Amount (میزان تغییر)': '11300', 'Change Percent (درصد تغییر)': '1.11%', 'Gregorian Date': '2025/09/04', 'Persian Date': '1404/06/13'}
+2025-09-07 16:02:30,426 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1032700.0, 'Low Price (کمترین)': 1023800.0, 'High Price (بیشترین)': 1032700.0, 'Close Price (پایانی)': 1025700.0, 'Change Amount (میزان تغییر)': '6300', 'Change Percent (درصد تغییر)': '0.61%', 'Gregorian Date': '2025/09/03', 'Persian Date': '1404/06/12'}
+2025-09-07 16:02:30,447 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1055700.0, 'Low Price (کمترین)': 1031300.0, 'High Price (بیشترین)': 1056700.0, 'Close Price (پایانی)': 1032000.0, 'Change Amount (میزان تغییر)': '16300', 'Change Percent (درصد تغییر)': '1.58%', 'Gregorian Date': '2025/09/02', 'Persian Date': '1404/06/11'}
+2025-09-07 16:02:30,470 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1024900.0, 'Low Price (کمترین)': 1024300.0, 'High Price (بیشترین)': 1049200.0, 'Close Price (پایانی)': 1048300.0, 'Change Amount (میزان تغییر)': '22100', 'Change Percent (درصد تغییر)': '2.15%', 'Gregorian Date': '2025/08/31', 'Persian Date': '1404/06/09'}
+2025-09-07 16:02:30,493 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1003700.0, 'Low Price (کمترین)': 999700.0, 'High Price (بیشترین)': 1026200.0, 'Close Price (پایانی)': 1026200.0, 'Change Amount (میزان تغییر)': '37200', 'Change Percent (درصد تغییر)': '3.76%', 'Gregorian Date': '2025/08/30', 'Persian Date': '1404/06/08'}
+2025-09-07 16:02:30,518 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 1000000.0, 'Low Price (کمترین)': 999500.0, 'High Price (بیشترین)': 1002000.0, 'Close Price (پایانی)': 989000.0, 'Change Amount (میزان تغییر)': '11000', 'Change Percent (درصد تغییر)': '1.11%', 'Gregorian Date': '2025/08/28', 'Persian Date': '1404/06/06'}
+2025-09-07 16:02:30,544 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 999950.0, 'Low Price (کمترین)': 976350.0, 'High Price (بیشترین)': 1004500.0, 'Close Price (پایانی)': 1000000.0, 'Change Amount (میزان تغییر)': '33500', 'Change Percent (درصد تغییر)': '3.47%', 'Gregorian Date': '2025/08/27', 'Persian Date': '1404/06/05'}
+2025-09-07 16:02:30,568 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 959100.0, 'Low Price (کمترین)': 958700.0, 'High Price (بیشترین)': 967100.0, 'Close Price (پایانی)': 966500.0, 'Change Amount (میزان تغییر)': '8500', 'Change Percent (درصد تغییر)': '0.89%', 'Gregorian Date': '2025/08/26', 'Persian Date': '1404/06/04'}
+2025-09-07 16:02:30,590 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 947700.0, 'Low Price (کمترین)': 947700.0, 'High Price (بیشترین)': 959100.0, 'Close Price (پایانی)': 958000.0, 'Change Amount (میزان تغییر)': '17000', 'Change Percent (درصد تغییر)': '1.81%', 'Gregorian Date': '2025/08/25', 'Persian Date': '1404/06/03'}
+2025-09-07 16:02:30,612 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 935600.0, 'Low Price (کمترین)': 933700.0, 'High Price (بیشترین)': 942100.0, 'Close Price (پایانی)': 941000.0, 'Change Amount (میزان تغییر)': '9600', 'Change Percent (درصد تغییر)': '1.02%', 'Gregorian Date': '2025/08/23', 'Persian Date': '1404/06/01'}
+2025-09-07 16:02:30,633 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 939950.0, 'Low Price (کمترین)': 939700.0, 'High Price (بیشترین)': 951100.0, 'Close Price (پایانی)': 950600.0, 'Change Amount (میزان تغییر)': '13100', 'Change Percent (درصد تغییر)': '1.4%', 'Gregorian Date': '2025/08/21', 'Persian Date': '1404/05/30'}
+2025-09-07 16:02:30,655 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 934400.0, 'Low Price (کمترین)': 934200.0, 'High Price (بیشترین)': 940100.0, 'Close Price (پایانی)': 937500.0, 'Change Amount (میزان تغییر)': '4050', 'Change Percent (درصد تغییر)': '0.43%', 'Gregorian Date': '2025/08/20', 'Persian Date': '1404/05/29'}
+2025-09-07 16:02:30,676 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 938050.0, 'Low Price (کمترین)': 932700.0, 'High Price (بیشترین)': 938100.0, 'Close Price (پایانی)': 933450.0, 'Change Amount (میزان تغییر)': '5050', 'Change Percent (درصد تغییر)': '0.54%', 'Gregorian Date': '2025/08/19', 'Persian Date': '1404/05/28'}
+2025-09-07 16:02:30,697 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 934250.0, 'Low Price (کمترین)': 934200.0, 'High Price (بیشترین)': 938600.0, 'Close Price (پایانی)': 938500.0, 'Change Amount (میزان تغییر)': '5600', 'Change Percent (درصد تغییر)': '0.6%', 'Gregorian Date': '2025/08/18', 'Persian Date': '1404/05/27'}
+2025-09-07 16:02:30,718 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 927300.0, 'Low Price (کمترین)': 927200.0, 'High Price (بیشترین)': 935100.0, 'Close Price (پایانی)': 932900.0, 'Change Amount (میزان تغییر)': '5300', 'Change Percent (درصد تغییر)': '0.57%', 'Gregorian Date': '2025/08/17', 'Persian Date': '1404/05/26'}
+2025-09-07 16:02:30,740 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 933050.0, 'Low Price (کمترین)': 927200.0, 'High Price (بیشترین)': 934100.0, 'Close Price (پایانی)': 927600.0, 'Change Amount (میزان تغییر)': '9100', 'Change Percent (درصد تغییر)': '0.98%', 'Gregorian Date': '2025/08/16', 'Persian Date': '1404/05/25'}
+2025-09-07 16:02:30,762 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 924700.0, 'Low Price (کمترین)': 924700.0, 'High Price (بیشترین)': 937100.0, 'Close Price (پایانی)': 936700.0, 'Change Amount (میزان تغییر)': '11800', 'Change Percent (درصد تغییر)': '1.28%', 'Gregorian Date': '2025/08/13', 'Persian Date': '1404/05/22'}
+2025-09-07 16:02:30,783 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 930500.0, 'Low Price (کمترین)': 924200.0, 'High Price (بیشترین)': 930600.0, 'Close Price (پایانی)': 924900.0, 'Change Amount (میزان تغییر)': '7850', 'Change Percent (درصد تغییر)': '0.85%', 'Gregorian Date': '2025/08/12', 'Persian Date': '1404/05/21'}
+2025-09-07 16:02:30,804 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 920800.0, 'Low Price (کمترین)': 920700.0, 'High Price (بیشترین)': 934600.0, 'Close Price (پایانی)': 932750.0, 'Change Amount (میزان تغییر)': '12750', 'Change Percent (درصد تغییر)': '1.39%', 'Gregorian Date': '2025/08/11', 'Persian Date': '1404/05/20'}
+2025-09-07 16:02:30,826 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 917600.0, 'Low Price (کمترین)': 915300.0, 'High Price (بیشترین)': 921600.0, 'Close Price (پایانی)': 920000.0, 'Change Amount (میزان تغییر)': '1700', 'Change Percent (درصد تغییر)': '0.19%', 'Gregorian Date': '2025/08/10', 'Persian Date': '1404/05/19'}
+2025-09-07 16:02:30,851 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 933250.0, 'Low Price (کمترین)': 917200.0, 'High Price (بیشترین)': 933600.0, 'Close Price (پایانی)': 918300.0, 'Change Amount (میزان تغییر)': '16200', 'Change Percent (درصد تغییر)': '1.76%', 'Gregorian Date': '2025/08/09', 'Persian Date': '1404/05/18'}
+2025-09-07 16:02:30,873 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 929050.0, 'Low Price (کمترین)': 928700.0, 'High Price (بیشترین)': 935100.0, 'Close Price (پایانی)': 934500.0, 'Change Amount (میزان تغییر)': '4900', 'Change Percent (درصد تغییر)': '0.53%', 'Gregorian Date': '2025/08/06', 'Persian Date': '1404/05/15'}
+2025-09-07 16:02:30,894 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 933050.0, 'Low Price (کمترین)': 928200.0, 'High Price (بیشترین)': 935050.0, 'Close Price (پایانی)': 929600.0, 'Change Amount (میزان تغییر)': '4500', 'Change Percent (درصد تغییر)': '0.48%', 'Gregorian Date': '2025/08/05', 'Persian Date': '1404/05/14'}
+2025-09-07 16:02:30,916 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 937500.0, 'Low Price (کمترین)': 931200.0, 'High Price (بیشترین)': 949100.0, 'Close Price (پایانی)': 934100.0, 'Change Amount (میزان تغییر)': '3900', 'Change Percent (درصد تغییر)': '0.42%', 'Gregorian Date': '2025/08/04', 'Persian Date': '1404/05/13'}
+2025-09-07 16:02:30,937 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 924300.0, 'Low Price (کمترین)': 923700.0, 'High Price (بیشترین)': 938100.0, 'Close Price (پایانی)': 938000.0, 'Change Amount (میزان تغییر)': '14000', 'Change Percent (درصد تغییر)': '1.52%', 'Gregorian Date': '2025/08/03', 'Persian Date': '1404/05/12'}
+2025-09-07 16:02:30,959 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 912450.0, 'Low Price (کمترین)': 912200.0, 'High Price (بیشترین)': 927600.0, 'Close Price (پایانی)': 924000.0, 'Change Amount (میزان تغییر)': '12200', 'Change Percent (درصد تغییر)': '1.34%', 'Gregorian Date': '2025/08/02', 'Persian Date': '1404/05/11'}
+2025-09-07 16:02:30,981 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 905400.0, 'Low Price (کمترین)': 904700.0, 'High Price (بیشترین)': 912600.0, 'Close Price (پایانی)': 911800.0, 'Change Amount (میزان تغییر)': '6200', 'Change Percent (درصد تغییر)': '0.68%', 'Gregorian Date': '2025/08/01', 'Persian Date': '1404/05/10'}
+2025-09-07 16:02:31,002 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 896100.0, 'Low Price (کمترین)': 895700.0, 'High Price (بیشترین)': 908850.0, 'Close Price (پایانی)': 905600.0, 'Change Amount (میزان تغییر)': '9600', 'Change Percent (درصد تغییر)': '1.07%', 'Gregorian Date': '2025/07/30', 'Persian Date': '1404/05/08'}
+2025-09-07 16:02:31,024 - WARNING - Invalid row data: {'Open Price (بازگشایی)': 892100.0, 'Low Price (کمترین)': 891800.0, 'High Price (بیشترین)': 896100.0, 'Close Price (پایانی)': 896000.0, 'Change Amount (میزان تغییر)': '3500', 'Change Percent (درصد تغییر)': '0.39%', 'Gregorian Date': '2025/07/29', 'Persian Date': '1404/05/07'}
+2025-09-07 16:02:31,024 - INFO - Successfully extracted 0 valid rows from current page
+2025-09-07 16:02:31,024 - WARNING - No data found on current page. Stopping.
+2025-09-07 16:02:31,024 - INFO - 
+Scraping completed! Total records scraped: 0
+2025-09-07 16:02:31,024 - INFO - No new data to save
+2025-09-07 16:02:31,103 - INFO - Chrome driver closed
+2025-09-07 16:02:52,634 - INFO - No existing data file found. Starting fresh.
+2025-09-07 16:02:52,634 - INFO - No existing data found. Starting full scrape...
+2025-09-07 16:02:52,634 - INFO - Starting dollar scraper...
+2025-09-07 16:02:52,634 - INFO - Setting up Chrome driver...
+2025-09-07 16:02:52,634 - INFO - ====== WebDriver manager ======
+2025-09-07 16:02:52,790 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:52,897 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:02:52,934 - INFO - Driver [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-09-07 16:02:54,274 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 16:02:57,683 - INFO - Total records available: 3648
+2025-09-07 16:02:57,684 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 16:02:57,690 - INFO - Found 30 rows on current page
+2025-09-07 16:02:58,364 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:02:58,364 - INFO - Progress: 30/3648 (0.8%) - ETA: 11.5 minutes
+2025-09-07 16:03:01,407 - INFO - 
+--- Scraping Page 2 ---
+2025-09-07 16:03:01,422 - INFO - Found 30 rows on current page
+2025-09-07 16:03:02,038 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:02,038 - INFO - Progress: 60/3648 (1.6%) - ETA: 9.4 minutes
+2025-09-07 16:03:05,063 - INFO - 
+--- Scraping Page 3 ---
+2025-09-07 16:03:05,078 - INFO - Found 30 rows on current page
+2025-09-07 16:03:05,712 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:05,712 - INFO - Progress: 90/3648 (2.5%) - ETA: 8.6 minutes
+2025-09-07 16:03:08,739 - INFO - 
+--- Scraping Page 4 ---
+2025-09-07 16:03:08,747 - INFO - Found 30 rows on current page
+2025-09-07 16:03:09,402 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:09,402 - INFO - Progress: 120/3648 (3.3%) - ETA: 8.2 minutes
+2025-09-07 16:03:12,433 - INFO - 
+--- Scraping Page 5 ---
+2025-09-07 16:03:12,443 - INFO - Found 30 rows on current page
+2025-09-07 16:03:13,091 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:13,091 - INFO - Progress: 150/3648 (4.1%) - ETA: 8.0 minutes
+2025-09-07 16:03:16,124 - INFO - 
+--- Scraping Page 6 ---
+2025-09-07 16:03:16,140 - INFO - Found 30 rows on current page
+2025-09-07 16:03:16,796 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:16,796 - INFO - Progress: 180/3648 (4.9%) - ETA: 7.8 minutes
+2025-09-07 16:03:19,827 - INFO - 
+--- Scraping Page 7 ---
+2025-09-07 16:03:19,838 - INFO - Found 30 rows on current page
+2025-09-07 16:03:20,488 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:20,488 - INFO - Progress: 210/3648 (5.8%) - ETA: 7.6 minutes
+2025-09-07 16:03:23,522 - INFO - 
+--- Scraping Page 8 ---
+2025-09-07 16:03:23,530 - INFO - Found 30 rows on current page
+2025-09-07 16:03:24,205 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:24,205 - INFO - Progress: 240/3648 (6.6%) - ETA: 7.5 minutes
+2025-09-07 16:03:27,234 - INFO - 
+--- Scraping Page 9 ---
+2025-09-07 16:03:27,245 - INFO - Found 30 rows on current page
+2025-09-07 16:03:27,932 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:27,932 - INFO - Progress: 270/3648 (7.4%) - ETA: 7.4 minutes
+2025-09-07 16:03:30,961 - INFO - 
+--- Scraping Page 10 ---
+2025-09-07 16:03:30,970 - INFO - Found 30 rows on current page
+2025-09-07 16:03:31,622 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:31,622 - INFO - Progress: 300/3648 (8.2%) - ETA: 7.3 minutes
+2025-09-07 16:03:34,654 - INFO - 
+--- Scraping Page 11 ---
+2025-09-07 16:03:34,663 - INFO - Found 30 rows on current page
+2025-09-07 16:03:35,380 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:35,380 - INFO - Progress: 330/3648 (9.0%) - ETA: 7.2 minutes
+2025-09-07 16:03:38,410 - INFO - 
+--- Scraping Page 12 ---
+2025-09-07 16:03:38,415 - INFO - Found 30 rows on current page
+2025-09-07 16:03:39,064 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:39,064 - INFO - Progress: 360/3648 (9.9%) - ETA: 7.1 minutes
+2025-09-07 16:03:42,095 - INFO - 
+--- Scraping Page 13 ---
+2025-09-07 16:03:42,106 - INFO - Found 30 rows on current page
+2025-09-07 16:03:42,777 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:42,777 - INFO - Progress: 390/3648 (10.7%) - ETA: 7.0 minutes
+2025-09-07 16:03:45,810 - INFO - 
+--- Scraping Page 14 ---
+2025-09-07 16:03:45,827 - INFO - Found 30 rows on current page
+2025-09-07 16:03:46,472 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:46,472 - INFO - Progress: 420/3648 (11.5%) - ETA: 6.9 minutes
+2025-09-07 16:03:49,496 - INFO - 
+--- Scraping Page 15 ---
+2025-09-07 16:03:49,508 - INFO - Found 30 rows on current page
+2025-09-07 16:03:50,171 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:50,171 - INFO - Progress: 450/3648 (12.3%) - ETA: 6.8 minutes
+2025-09-07 16:03:53,199 - INFO - 
+--- Scraping Page 16 ---
+2025-09-07 16:03:53,212 - INFO - Found 30 rows on current page
+2025-09-07 16:03:53,930 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:53,930 - INFO - Progress: 480/3648 (13.2%) - ETA: 6.7 minutes
+2025-09-07 16:03:56,961 - INFO - 
+--- Scraping Page 17 ---
+2025-09-07 16:03:56,969 - INFO - Found 30 rows on current page
+2025-09-07 16:03:57,644 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:03:57,644 - INFO - Progress: 510/3648 (14.0%) - ETA: 6.7 minutes
+2025-09-07 16:04:00,673 - INFO - 
+--- Scraping Page 18 ---
+2025-09-07 16:04:00,679 - INFO - Found 30 rows on current page
+2025-09-07 16:04:01,333 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:01,333 - INFO - Progress: 540/3648 (14.8%) - ETA: 6.6 minutes
+2025-09-07 16:04:04,359 - INFO - 
+--- Scraping Page 19 ---
+2025-09-07 16:04:04,372 - INFO - Found 30 rows on current page
+2025-09-07 16:04:05,034 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:05,034 - INFO - Progress: 570/3648 (15.6%) - ETA: 6.5 minutes
+2025-09-07 16:04:08,068 - INFO - 
+--- Scraping Page 20 ---
+2025-09-07 16:04:08,080 - INFO - Found 30 rows on current page
+2025-09-07 16:04:08,740 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:08,740 - INFO - Progress: 600/3648 (16.4%) - ETA: 6.4 minutes
+2025-09-07 16:04:11,768 - INFO - 
+--- Scraping Page 21 ---
+2025-09-07 16:04:11,772 - INFO - Found 30 rows on current page
+2025-09-07 16:04:12,431 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:12,431 - INFO - Progress: 630/3648 (17.3%) - ETA: 6.4 minutes
+2025-09-07 16:04:15,462 - INFO - 
+--- Scraping Page 22 ---
+2025-09-07 16:04:15,476 - INFO - Found 30 rows on current page
+2025-09-07 16:04:16,130 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:16,130 - INFO - Progress: 660/3648 (18.1%) - ETA: 6.3 minutes
+2025-09-07 16:04:19,163 - INFO - 
+--- Scraping Page 23 ---
+2025-09-07 16:04:19,171 - INFO - Found 30 rows on current page
+2025-09-07 16:04:19,826 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:19,826 - INFO - Progress: 690/3648 (18.9%) - ETA: 6.2 minutes
+2025-09-07 16:04:22,860 - INFO - 
+--- Scraping Page 24 ---
+2025-09-07 16:04:22,868 - INFO - Found 30 rows on current page
+2025-09-07 16:04:23,538 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:23,538 - INFO - Progress: 720/3648 (19.7%) - ETA: 6.2 minutes
+2025-09-07 16:04:26,575 - INFO - 
+--- Scraping Page 25 ---
+2025-09-07 16:04:26,588 - INFO - Found 30 rows on current page
+2025-09-07 16:04:27,268 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:27,268 - INFO - Progress: 750/3648 (20.6%) - ETA: 6.1 minutes
+2025-09-07 16:04:30,300 - INFO - 
+--- Scraping Page 26 ---
+2025-09-07 16:04:30,312 - INFO - Found 30 rows on current page
+2025-09-07 16:04:31,001 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:31,001 - INFO - Progress: 780/3648 (21.4%) - ETA: 6.0 minutes
+2025-09-07 16:04:34,031 - INFO - 
+--- Scraping Page 27 ---
+2025-09-07 16:04:34,043 - INFO - Found 30 rows on current page
+2025-09-07 16:04:34,844 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:34,844 - INFO - Progress: 810/3648 (22.2%) - ETA: 6.0 minutes
+2025-09-07 16:04:37,885 - INFO - 
+--- Scraping Page 28 ---
+2025-09-07 16:04:37,899 - INFO - Found 30 rows on current page
+2025-09-07 16:04:38,590 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:38,590 - INFO - Progress: 840/3648 (23.0%) - ETA: 5.9 minutes
+2025-09-07 16:04:41,624 - INFO - 
+--- Scraping Page 29 ---
+2025-09-07 16:04:41,641 - INFO - Found 30 rows on current page
+2025-09-07 16:04:42,339 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:42,339 - INFO - Progress: 870/3648 (23.8%) - ETA: 5.8 minutes
+2025-09-07 16:04:45,372 - INFO - 
+--- Scraping Page 30 ---
+2025-09-07 16:04:45,384 - INFO - Found 30 rows on current page
+2025-09-07 16:04:46,046 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:46,046 - INFO - Progress: 900/3648 (24.7%) - ETA: 5.8 minutes
+2025-09-07 16:04:49,075 - INFO - 
+--- Scraping Page 31 ---
+2025-09-07 16:04:49,085 - INFO - Found 30 rows on current page
+2025-09-07 16:04:49,741 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:49,741 - INFO - Progress: 930/3648 (25.5%) - ETA: 5.7 minutes
+2025-09-07 16:04:52,773 - INFO - 
+--- Scraping Page 32 ---
+2025-09-07 16:04:52,786 - INFO - Found 30 rows on current page
+2025-09-07 16:04:53,449 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:53,449 - INFO - Progress: 960/3648 (26.3%) - ETA: 5.6 minutes
+2025-09-07 16:04:56,487 - INFO - 
+--- Scraping Page 33 ---
+2025-09-07 16:04:56,500 - INFO - Found 30 rows on current page
+2025-09-07 16:04:57,158 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:04:57,158 - INFO - Progress: 990/3648 (27.1%) - ETA: 5.6 minutes
+2025-09-07 16:05:00,187 - INFO - 
+--- Scraping Page 34 ---
+2025-09-07 16:05:00,197 - INFO - Found 30 rows on current page
+2025-09-07 16:05:00,860 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:00,860 - INFO - Progress: 1020/3648 (28.0%) - ETA: 5.5 minutes
+2025-09-07 16:05:03,887 - INFO - 
+--- Scraping Page 35 ---
+2025-09-07 16:05:03,895 - INFO - Found 30 rows on current page
+2025-09-07 16:05:04,558 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:04,558 - INFO - Progress: 1050/3648 (28.8%) - ETA: 5.4 minutes
+2025-09-07 16:05:07,596 - INFO - 
+--- Scraping Page 36 ---
+2025-09-07 16:05:07,604 - INFO - Found 30 rows on current page
+2025-09-07 16:05:08,264 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:08,264 - INFO - Progress: 1080/3648 (29.6%) - ETA: 5.4 minutes
+2025-09-07 16:05:11,298 - INFO - 
+--- Scraping Page 37 ---
+2025-09-07 16:05:11,312 - INFO - Found 30 rows on current page
+2025-09-07 16:05:11,971 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:11,971 - INFO - Progress: 1110/3648 (30.4%) - ETA: 5.3 minutes
+2025-09-07 16:05:15,002 - INFO - 
+--- Scraping Page 38 ---
+2025-09-07 16:05:15,018 - INFO - Found 30 rows on current page
+2025-09-07 16:05:15,675 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:15,675 - INFO - Progress: 1140/3648 (31.2%) - ETA: 5.2 minutes
+2025-09-07 16:05:18,710 - INFO - 
+--- Scraping Page 39 ---
+2025-09-07 16:05:18,722 - INFO - Found 30 rows on current page
+2025-09-07 16:05:19,382 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:19,382 - INFO - Progress: 1170/3648 (32.1%) - ETA: 5.2 minutes
+2025-09-07 16:05:22,418 - INFO - 
+--- Scraping Page 40 ---
+2025-09-07 16:05:22,434 - INFO - Found 30 rows on current page
+2025-09-07 16:05:23,095 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:23,096 - INFO - Progress: 1200/3648 (32.9%) - ETA: 5.1 minutes
+2025-09-07 16:05:26,130 - INFO - 
+--- Scraping Page 41 ---
+2025-09-07 16:05:26,145 - INFO - Found 30 rows on current page
+2025-09-07 16:05:26,800 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:26,800 - INFO - Progress: 1230/3648 (33.7%) - ETA: 5.1 minutes
+2025-09-07 16:05:29,833 - INFO - 
+--- Scraping Page 42 ---
+2025-09-07 16:05:29,848 - INFO - Found 30 rows on current page
+2025-09-07 16:05:30,502 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:30,502 - INFO - Progress: 1260/3648 (34.5%) - ETA: 5.0 minutes
+2025-09-07 16:05:33,529 - INFO - 
+--- Scraping Page 43 ---
+2025-09-07 16:05:33,535 - INFO - Found 30 rows on current page
+2025-09-07 16:05:34,199 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:34,200 - INFO - Progress: 1290/3648 (35.4%) - ETA: 4.9 minutes
+2025-09-07 16:05:37,230 - INFO - 
+--- Scraping Page 44 ---
+2025-09-07 16:05:37,238 - INFO - Found 30 rows on current page
+2025-09-07 16:05:37,927 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:37,928 - INFO - Progress: 1320/3648 (36.2%) - ETA: 4.9 minutes
+2025-09-07 16:05:40,961 - INFO - 
+--- Scraping Page 45 ---
+2025-09-07 16:05:40,975 - INFO - Found 30 rows on current page
+2025-09-07 16:05:41,621 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:41,621 - INFO - Progress: 1350/3648 (37.0%) - ETA: 4.8 minutes
+2025-09-07 16:05:44,649 - INFO - 
+--- Scraping Page 46 ---
+2025-09-07 16:05:44,666 - INFO - Found 30 rows on current page
+2025-09-07 16:05:45,313 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:45,313 - INFO - Progress: 1380/3648 (37.8%) - ETA: 4.7 minutes
+2025-09-07 16:05:48,347 - INFO - 
+--- Scraping Page 47 ---
+2025-09-07 16:05:48,358 - INFO - Found 30 rows on current page
+2025-09-07 16:05:49,012 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:49,012 - INFO - Progress: 1410/3648 (38.7%) - ETA: 4.7 minutes
+2025-09-07 16:05:52,045 - INFO - 
+--- Scraping Page 48 ---
+2025-09-07 16:05:52,060 - INFO - Found 30 rows on current page
+2025-09-07 16:05:52,722 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:52,722 - INFO - Progress: 1440/3648 (39.5%) - ETA: 4.6 minutes
+2025-09-07 16:05:55,760 - INFO - 
+--- Scraping Page 49 ---
+2025-09-07 16:05:55,771 - INFO - Found 30 rows on current page
+2025-09-07 16:05:56,410 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:05:56,410 - INFO - Progress: 1470/3648 (40.3%) - ETA: 4.5 minutes
+2025-09-07 16:05:59,434 - INFO - 
+--- Scraping Page 50 ---
+2025-09-07 16:05:59,445 - INFO - Found 30 rows on current page
+2025-09-07 16:06:00,091 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:00,091 - INFO - Progress: 1500/3648 (41.1%) - ETA: 4.5 minutes
+2025-09-07 16:06:03,120 - INFO - 
+--- Scraping Page 51 ---
+2025-09-07 16:06:03,129 - INFO - Found 30 rows on current page
+2025-09-07 16:06:03,789 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:03,789 - INFO - Progress: 1530/3648 (41.9%) - ETA: 4.4 minutes
+2025-09-07 16:06:06,818 - INFO - 
+--- Scraping Page 52 ---
+2025-09-07 16:06:06,828 - INFO - Found 30 rows on current page
+2025-09-07 16:06:07,485 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:07,485 - INFO - Progress: 1560/3648 (42.8%) - ETA: 4.3 minutes
+2025-09-07 16:06:10,514 - INFO - 
+--- Scraping Page 53 ---
+2025-09-07 16:06:10,522 - INFO - Found 30 rows on current page
+2025-09-07 16:06:11,177 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:11,177 - INFO - Progress: 1590/3648 (43.6%) - ETA: 4.3 minutes
+2025-09-07 16:06:14,211 - INFO - 
+--- Scraping Page 54 ---
+2025-09-07 16:06:14,228 - INFO - Found 30 rows on current page
+2025-09-07 16:06:14,978 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:14,978 - INFO - Progress: 1620/3648 (44.4%) - ETA: 4.2 minutes
+2025-09-07 16:06:18,014 - INFO - 
+--- Scraping Page 55 ---
+2025-09-07 16:06:18,027 - INFO - Found 30 rows on current page
+2025-09-07 16:06:18,687 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:18,687 - INFO - Progress: 1650/3648 (45.2%) - ETA: 4.2 minutes
+2025-09-07 16:06:21,722 - INFO - 
+--- Scraping Page 56 ---
+2025-09-07 16:06:21,736 - INFO - Found 30 rows on current page
+2025-09-07 16:06:22,387 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:22,387 - INFO - Progress: 1680/3648 (46.1%) - ETA: 4.1 minutes
+2025-09-07 16:06:25,416 - INFO - 
+--- Scraping Page 57 ---
+2025-09-07 16:06:25,432 - INFO - Found 30 rows on current page
+2025-09-07 16:06:26,117 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:26,117 - INFO - Progress: 1710/3648 (46.9%) - ETA: 4.0 minutes
+2025-09-07 16:06:29,147 - INFO - 
+--- Scraping Page 58 ---
+2025-09-07 16:06:29,156 - INFO - Found 30 rows on current page
+2025-09-07 16:06:29,809 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:29,809 - INFO - Progress: 1740/3648 (47.7%) - ETA: 4.0 minutes
+2025-09-07 16:06:32,845 - INFO - 
+--- Scraping Page 59 ---
+2025-09-07 16:06:32,855 - INFO - Found 30 rows on current page
+2025-09-07 16:06:33,520 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:33,520 - INFO - Progress: 1770/3648 (48.5%) - ETA: 3.9 minutes
+2025-09-07 16:06:36,552 - INFO - 
+--- Scraping Page 60 ---
+2025-09-07 16:06:36,562 - INFO - Found 30 rows on current page
+2025-09-07 16:06:37,236 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:37,236 - INFO - Progress: 1800/3648 (49.3%) - ETA: 3.8 minutes
+2025-09-07 16:06:40,264 - INFO - 
+--- Scraping Page 61 ---
+2025-09-07 16:06:40,274 - INFO - Found 30 rows on current page
+2025-09-07 16:06:40,946 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:40,946 - INFO - Progress: 1830/3648 (50.2%) - ETA: 3.8 minutes
+2025-09-07 16:06:43,974 - INFO - 
+--- Scraping Page 62 ---
+2025-09-07 16:06:43,984 - INFO - Found 30 rows on current page
+2025-09-07 16:06:44,653 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:44,653 - INFO - Progress: 1860/3648 (51.0%) - ETA: 3.7 minutes
+2025-09-07 16:06:47,690 - INFO - 
+--- Scraping Page 63 ---
+2025-09-07 16:06:47,697 - INFO - Found 30 rows on current page
+2025-09-07 16:06:48,403 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:48,403 - INFO - Progress: 1890/3648 (51.8%) - ETA: 3.7 minutes
+2025-09-07 16:06:51,443 - INFO - 
+--- Scraping Page 64 ---
+2025-09-07 16:06:51,457 - INFO - Found 30 rows on current page
+2025-09-07 16:06:52,124 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:52,124 - INFO - Progress: 1920/3648 (52.6%) - ETA: 3.6 minutes
+2025-09-07 16:06:55,160 - INFO - 
+--- Scraping Page 65 ---
+2025-09-07 16:06:55,173 - INFO - Found 30 rows on current page
+2025-09-07 16:06:55,837 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:55,837 - INFO - Progress: 1950/3648 (53.5%) - ETA: 3.5 minutes
+2025-09-07 16:06:58,864 - INFO - 
+--- Scraping Page 66 ---
+2025-09-07 16:06:58,873 - INFO - Found 30 rows on current page
+2025-09-07 16:06:59,528 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:06:59,528 - INFO - Progress: 1980/3648 (54.3%) - ETA: 3.5 minutes
+2025-09-07 16:07:02,563 - INFO - 
+--- Scraping Page 67 ---
+2025-09-07 16:07:02,576 - INFO - Found 30 rows on current page
+2025-09-07 16:07:03,237 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:03,237 - INFO - Progress: 2010/3648 (55.1%) - ETA: 3.4 minutes
+2025-09-07 16:07:06,273 - INFO - 
+--- Scraping Page 68 ---
+2025-09-07 16:07:06,281 - INFO - Found 30 rows on current page
+2025-09-07 16:07:06,983 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:06,983 - INFO - Progress: 2040/3648 (55.9%) - ETA: 3.3 minutes
+2025-09-07 16:07:10,014 - INFO - 
+--- Scraping Page 69 ---
+2025-09-07 16:07:10,025 - INFO - Found 30 rows on current page
+2025-09-07 16:07:10,690 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:10,690 - INFO - Progress: 2070/3648 (56.7%) - ETA: 3.3 minutes
+2025-09-07 16:07:13,724 - INFO - 
+--- Scraping Page 70 ---
+2025-09-07 16:07:13,741 - INFO - Found 30 rows on current page
+2025-09-07 16:07:14,421 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:14,422 - INFO - Progress: 2100/3648 (57.6%) - ETA: 3.2 minutes
+2025-09-07 16:07:17,450 - INFO - 
+--- Scraping Page 71 ---
+2025-09-07 16:07:17,461 - INFO - Found 30 rows on current page
+2025-09-07 16:07:18,117 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:18,117 - INFO - Progress: 2130/3648 (58.4%) - ETA: 3.2 minutes
+2025-09-07 16:07:21,145 - INFO - 
+--- Scraping Page 72 ---
+2025-09-07 16:07:21,153 - INFO - Found 30 rows on current page
+2025-09-07 16:07:21,799 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:21,799 - INFO - Progress: 2160/3648 (59.2%) - ETA: 3.1 minutes
+2025-09-07 16:07:24,830 - INFO - 
+--- Scraping Page 73 ---
+2025-09-07 16:07:24,842 - INFO - Found 30 rows on current page
+2025-09-07 16:07:25,499 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:25,499 - INFO - Progress: 2190/3648 (60.0%) - ETA: 3.0 minutes
+2025-09-07 16:07:28,525 - INFO - 
+--- Scraping Page 74 ---
+2025-09-07 16:07:28,530 - INFO - Found 30 rows on current page
+2025-09-07 16:07:29,203 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:29,203 - INFO - Progress: 2220/3648 (60.9%) - ETA: 3.0 minutes
+2025-09-07 16:07:32,238 - INFO - 
+--- Scraping Page 75 ---
+2025-09-07 16:07:32,251 - INFO - Found 30 rows on current page
+2025-09-07 16:07:32,920 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:32,920 - INFO - Progress: 2250/3648 (61.7%) - ETA: 2.9 minutes
+2025-09-07 16:07:35,947 - INFO - 
+--- Scraping Page 76 ---
+2025-09-07 16:07:35,959 - INFO - Found 30 rows on current page
+2025-09-07 16:07:36,615 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:36,615 - INFO - Progress: 2280/3648 (62.5%) - ETA: 2.8 minutes
+2025-09-07 16:07:39,645 - INFO - 
+--- Scraping Page 77 ---
+2025-09-07 16:07:39,652 - INFO - Found 30 rows on current page
+2025-09-07 16:07:40,398 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:40,398 - INFO - Progress: 2310/3648 (63.3%) - ETA: 2.8 minutes
+2025-09-07 16:07:43,425 - INFO - 
+--- Scraping Page 78 ---
+2025-09-07 16:07:43,433 - INFO - Found 30 rows on current page
+2025-09-07 16:07:44,167 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:44,167 - INFO - Progress: 2340/3648 (64.1%) - ETA: 2.7 minutes
+2025-09-07 16:07:47,198 - INFO - 
+--- Scraping Page 79 ---
+2025-09-07 16:07:47,214 - INFO - Found 30 rows on current page
+2025-09-07 16:07:47,870 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:47,870 - INFO - Progress: 2370/3648 (65.0%) - ETA: 2.7 minutes
+2025-09-07 16:07:50,896 - INFO - 
+--- Scraping Page 80 ---
+2025-09-07 16:07:50,909 - INFO - Found 30 rows on current page
+2025-09-07 16:07:51,567 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:51,567 - INFO - Progress: 2400/3648 (65.8%) - ETA: 2.6 minutes
+2025-09-07 16:07:54,594 - INFO - 
+--- Scraping Page 81 ---
+2025-09-07 16:07:54,609 - INFO - Found 30 rows on current page
+2025-09-07 16:07:55,268 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:55,268 - INFO - Progress: 2430/3648 (66.6%) - ETA: 2.5 minutes
+2025-09-07 16:07:58,303 - INFO - 
+--- Scraping Page 82 ---
+2025-09-07 16:07:58,317 - INFO - Found 30 rows on current page
+2025-09-07 16:07:58,977 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:07:58,977 - INFO - Progress: 2460/3648 (67.4%) - ETA: 2.5 minutes
+2025-09-07 16:08:02,008 - INFO - 
+--- Scraping Page 83 ---
+2025-09-07 16:08:02,021 - INFO - Found 30 rows on current page
+2025-09-07 16:08:02,680 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:02,680 - INFO - Progress: 2490/3648 (68.3%) - ETA: 2.4 minutes
+2025-09-07 16:08:05,713 - INFO - 
+--- Scraping Page 84 ---
+2025-09-07 16:08:05,725 - INFO - Found 30 rows on current page
+2025-09-07 16:08:06,382 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:06,382 - INFO - Progress: 2520/3648 (69.1%) - ETA: 2.3 minutes
+2025-09-07 16:08:09,412 - INFO - 
+--- Scraping Page 85 ---
+2025-09-07 16:08:09,426 - INFO - Found 30 rows on current page
+2025-09-07 16:08:10,075 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:10,075 - INFO - Progress: 2550/3648 (69.9%) - ETA: 2.3 minutes
+2025-09-07 16:08:13,111 - INFO - 
+--- Scraping Page 86 ---
+2025-09-07 16:08:13,125 - INFO - Found 30 rows on current page
+2025-09-07 16:08:13,778 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:13,778 - INFO - Progress: 2580/3648 (70.7%) - ETA: 2.2 minutes
+2025-09-07 16:08:16,807 - INFO - 
+--- Scraping Page 87 ---
+2025-09-07 16:08:16,821 - INFO - Found 30 rows on current page
+2025-09-07 16:08:17,466 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:17,466 - INFO - Progress: 2610/3648 (71.5%) - ETA: 2.2 minutes
+2025-09-07 16:08:20,497 - INFO - 
+--- Scraping Page 88 ---
+2025-09-07 16:08:20,508 - INFO - Found 30 rows on current page
+2025-09-07 16:08:21,160 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:21,160 - INFO - Progress: 2640/3648 (72.4%) - ETA: 2.1 minutes
+2025-09-07 16:08:24,186 - INFO - 
+--- Scraping Page 89 ---
+2025-09-07 16:08:24,196 - INFO - Found 30 rows on current page
+2025-09-07 16:08:24,859 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:24,859 - INFO - Progress: 2670/3648 (73.2%) - ETA: 2.0 minutes
+2025-09-07 16:08:27,887 - INFO - 
+--- Scraping Page 90 ---
+2025-09-07 16:08:27,895 - INFO - Found 30 rows on current page
+2025-09-07 16:08:28,567 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:28,567 - INFO - Progress: 2700/3648 (74.0%) - ETA: 2.0 minutes
+2025-09-07 16:08:31,600 - INFO - 
+--- Scraping Page 91 ---
+2025-09-07 16:08:31,612 - INFO - Found 30 rows on current page
+2025-09-07 16:08:32,274 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:32,274 - INFO - Progress: 2730/3648 (74.8%) - ETA: 1.9 minutes
+2025-09-07 16:08:35,300 - INFO - 
+--- Scraping Page 92 ---
+2025-09-07 16:08:35,312 - INFO - Found 30 rows on current page
+2025-09-07 16:08:35,971 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:35,971 - INFO - Progress: 2760/3648 (75.7%) - ETA: 1.8 minutes
+2025-09-07 16:08:39,008 - INFO - 
+--- Scraping Page 93 ---
+2025-09-07 16:08:39,017 - INFO - Found 30 rows on current page
+2025-09-07 16:08:39,682 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:39,683 - INFO - Progress: 2790/3648 (76.5%) - ETA: 1.8 minutes
+2025-09-07 16:08:42,713 - INFO - 
+--- Scraping Page 94 ---
+2025-09-07 16:08:42,722 - INFO - Found 30 rows on current page
+2025-09-07 16:08:43,378 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:43,378 - INFO - Progress: 2820/3648 (77.3%) - ETA: 1.7 minutes
+2025-09-07 16:08:46,414 - INFO - 
+--- Scraping Page 95 ---
+2025-09-07 16:08:46,426 - INFO - Found 30 rows on current page
+2025-09-07 16:08:47,146 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:47,147 - INFO - Progress: 2850/3648 (78.1%) - ETA: 1.7 minutes
+2025-09-07 16:08:50,183 - INFO - 
+--- Scraping Page 96 ---
+2025-09-07 16:08:50,196 - INFO - Found 30 rows on current page
+2025-09-07 16:08:50,850 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:50,850 - INFO - Progress: 2880/3648 (78.9%) - ETA: 1.6 minutes
+2025-09-07 16:08:53,884 - INFO - 
+--- Scraping Page 97 ---
+2025-09-07 16:08:53,896 - INFO - Found 30 rows on current page
+2025-09-07 16:08:54,581 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:54,582 - INFO - Progress: 2910/3648 (79.8%) - ETA: 1.5 minutes
+2025-09-07 16:08:57,612 - INFO - 
+--- Scraping Page 98 ---
+2025-09-07 16:08:57,622 - INFO - Found 30 rows on current page
+2025-09-07 16:08:58,273 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:08:58,273 - INFO - Progress: 2940/3648 (80.6%) - ETA: 1.5 minutes
+2025-09-07 16:09:01,304 - INFO - 
+--- Scraping Page 99 ---
+2025-09-07 16:09:01,318 - INFO - Found 30 rows on current page
+2025-09-07 16:09:01,965 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:01,965 - INFO - Progress: 2970/3648 (81.4%) - ETA: 1.4 minutes
+2025-09-07 16:09:04,995 - INFO - 
+--- Scraping Page 100 ---
+2025-09-07 16:09:05,009 - INFO - Found 30 rows on current page
+2025-09-07 16:09:05,654 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:05,654 - INFO - Progress: 3000/3648 (82.2%) - ETA: 1.3 minutes
+2025-09-07 16:09:08,678 - INFO - 
+--- Scraping Page 101 ---
+2025-09-07 16:09:08,685 - INFO - Found 30 rows on current page
+2025-09-07 16:09:09,338 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:09,338 - INFO - Progress: 3030/3648 (83.1%) - ETA: 1.3 minutes
+2025-09-07 16:09:12,369 - INFO - 
+--- Scraping Page 102 ---
+2025-09-07 16:09:12,378 - INFO - Found 30 rows on current page
+2025-09-07 16:09:13,038 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:13,038 - INFO - Progress: 3060/3648 (83.9%) - ETA: 1.2 minutes
+2025-09-07 16:09:16,072 - INFO - 
+--- Scraping Page 103 ---
+2025-09-07 16:09:16,082 - INFO - Found 30 rows on current page
+2025-09-07 16:09:16,733 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:16,733 - INFO - Progress: 3090/3648 (84.7%) - ETA: 1.2 minutes
+2025-09-07 16:09:19,754 - INFO - 
+--- Scraping Page 104 ---
+2025-09-07 16:09:19,763 - INFO - Found 30 rows on current page
+2025-09-07 16:09:20,414 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:20,414 - INFO - Progress: 3120/3648 (85.5%) - ETA: 1.1 minutes
+2025-09-07 16:09:23,443 - INFO - 
+--- Scraping Page 105 ---
+2025-09-07 16:09:23,452 - INFO - Found 30 rows on current page
+2025-09-07 16:09:24,130 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:24,130 - INFO - Progress: 3150/3648 (86.3%) - ETA: 1.0 minutes
+2025-09-07 16:09:27,162 - INFO - 
+--- Scraping Page 106 ---
+2025-09-07 16:09:27,176 - INFO - Found 30 rows on current page
+2025-09-07 16:09:27,835 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:27,835 - INFO - Progress: 3180/3648 (87.2%) - ETA: 1.0 minutes
+2025-09-07 16:09:30,867 - INFO - 
+--- Scraping Page 107 ---
+2025-09-07 16:09:30,879 - INFO - Found 30 rows on current page
+2025-09-07 16:09:31,527 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:31,528 - INFO - Progress: 3210/3648 (88.0%) - ETA: 0.9 minutes
+2025-09-07 16:09:34,549 - INFO - 
+--- Scraping Page 108 ---
+2025-09-07 16:09:34,560 - INFO - Found 30 rows on current page
+2025-09-07 16:09:35,213 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:35,213 - INFO - Progress: 3240/3648 (88.8%) - ETA: 0.8 minutes
+2025-09-07 16:09:38,243 - INFO - 
+--- Scraping Page 109 ---
+2025-09-07 16:09:38,254 - INFO - Found 30 rows on current page
+2025-09-07 16:09:38,912 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:38,912 - INFO - Progress: 3270/3648 (89.6%) - ETA: 0.8 minutes
+2025-09-07 16:09:41,943 - INFO - 
+--- Scraping Page 110 ---
+2025-09-07 16:09:41,956 - INFO - Found 30 rows on current page
+2025-09-07 16:09:42,611 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:42,611 - INFO - Progress: 3300/3648 (90.5%) - ETA: 0.7 minutes
+2025-09-07 16:09:45,642 - INFO - 
+--- Scraping Page 111 ---
+2025-09-07 16:09:45,659 - INFO - Found 30 rows on current page
+2025-09-07 16:09:46,307 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:46,307 - INFO - Progress: 3330/3648 (91.3%) - ETA: 0.7 minutes
+2025-09-07 16:09:49,336 - INFO - 
+--- Scraping Page 112 ---
+2025-09-07 16:09:49,349 - INFO - Found 30 rows on current page
+2025-09-07 16:09:49,998 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:49,998 - INFO - Progress: 3360/3648 (92.1%) - ETA: 0.6 minutes
+2025-09-07 16:09:53,030 - INFO - 
+--- Scraping Page 113 ---
+2025-09-07 16:09:53,042 - INFO - Found 30 rows on current page
+2025-09-07 16:09:53,701 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:53,701 - INFO - Progress: 3390/3648 (92.9%) - ETA: 0.5 minutes
+2025-09-07 16:09:56,728 - INFO - 
+--- Scraping Page 114 ---
+2025-09-07 16:09:56,737 - INFO - Found 30 rows on current page
+2025-09-07 16:09:57,382 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:09:57,382 - INFO - Progress: 3420/3648 (93.8%) - ETA: 0.5 minutes
+2025-09-07 16:10:00,412 - INFO - 
+--- Scraping Page 115 ---
+2025-09-07 16:10:00,423 - INFO - Found 30 rows on current page
+2025-09-07 16:10:01,065 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:01,065 - INFO - Progress: 3450/3648 (94.6%) - ETA: 0.4 minutes
+2025-09-07 16:10:04,093 - INFO - 
+--- Scraping Page 116 ---
+2025-09-07 16:10:04,101 - INFO - Found 30 rows on current page
+2025-09-07 16:10:04,755 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:04,756 - INFO - Progress: 3480/3648 (95.4%) - ETA: 0.3 minutes
+2025-09-07 16:10:07,785 - INFO - 
+--- Scraping Page 117 ---
+2025-09-07 16:10:07,794 - INFO - Found 30 rows on current page
+2025-09-07 16:10:08,448 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:08,448 - INFO - Progress: 3510/3648 (96.2%) - ETA: 0.3 minutes
+2025-09-07 16:10:11,483 - INFO - 
+--- Scraping Page 118 ---
+2025-09-07 16:10:11,498 - INFO - Found 30 rows on current page
+2025-09-07 16:10:12,155 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:12,155 - INFO - Progress: 3540/3648 (97.0%) - ETA: 0.2 minutes
+2025-09-07 16:10:15,184 - INFO - 
+--- Scraping Page 119 ---
+2025-09-07 16:10:15,197 - INFO - Found 30 rows on current page
+2025-09-07 16:10:15,846 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:15,846 - INFO - Progress: 3570/3648 (97.9%) - ETA: 0.2 minutes
+2025-09-07 16:10:18,876 - INFO - 
+--- Scraping Page 120 ---
+2025-09-07 16:10:18,883 - INFO - Found 30 rows on current page
+2025-09-07 16:10:19,563 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:19,564 - INFO - Progress: 3600/3648 (98.7%) - ETA: 0.1 minutes
+2025-09-07 16:10:22,593 - INFO - 
+--- Scraping Page 121 ---
+2025-09-07 16:10:22,606 - INFO - Found 30 rows on current page
+2025-09-07 16:10:23,290 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:10:23,291 - INFO - Progress: 3630/3648 (99.5%) - ETA: 0.0 minutes
+2025-09-07 16:10:26,322 - INFO - 
+--- Scraping Page 122 ---
+2025-09-07 16:10:26,332 - INFO - Found 18 rows on current page
+2025-09-07 16:10:26,726 - INFO - Successfully extracted 18 valid rows from current page
+2025-09-07 16:10:26,726 - INFO - Progress: 3648/3648 (100.0%) - ETA: 0.0 minutes
+2025-09-07 16:10:26,730 - INFO - Reached the last page
+2025-09-07 16:10:26,731 - INFO - 
+Scraping completed! Total records scraped: 3648
+2025-09-07 16:10:26,740 - INFO - Successfully saved 3648 records to data/usd_irr_historical_data.csv
+2025-09-07 16:10:26,740 - INFO - Data saved successfully!
+2025-09-07 16:10:26,744 - INFO - Loaded existing data: 3648 records from data/usd_irr_historical_data.csv
+2025-09-07 16:10:26,746 - INFO - Final dataset summary: {'total_records': 3648, 'latest_date': '2025/09/06', 'oldest_date': '2011/11/26', 'date_range': '2011/11/26 to 2025/09/06'}
+2025-09-07 16:10:26,854 - INFO - Chrome driver closed
+2025-09-07 16:18:36,403 - INFO - Loaded existing data: 3648 records from data/usd_irr_historical_data.csv
+2025-09-07 16:18:36,405 - INFO - Existing data found. Running incremental update...
+2025-09-07 16:18:36,405 - INFO - Starting dollar scraper...
+2025-09-07 16:18:36,409 - INFO - Loaded existing data: 3648 records from data/usd_irr_historical_data.csv
+2025-09-07 16:18:36,410 - INFO - Existing data summary: {'total_records': 3648, 'latest_date': '2025/09/06', 'oldest_date': '2011/11/26', 'date_range': '2011/11/26 to 2025/09/06'}
+2025-09-07 16:18:36,410 - INFO - Setting up Chrome driver...
+2025-09-07 16:18:36,410 - INFO - ====== WebDriver manager ======
+2025-09-07 16:18:36,573 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:18:36,611 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:18:36,646 - INFO - Driver [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-09-07 16:18:37,711 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 16:18:41,124 - INFO - Total records available: 3648
+2025-09-07 16:18:41,124 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 16:18:41,130 - INFO - Found 30 rows on current page
+2025-09-07 16:18:41,768 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:18:41,772 - INFO - Loaded existing data: 3648 records from data/usd_irr_historical_data.csv
+2025-09-07 16:18:41,774 - INFO - Reached existing data. Stopping at 2025/09/06
+2025-09-07 16:18:41,776 - INFO - Loaded existing data: 3648 records from data/usd_irr_historical_data.csv
+2025-09-07 16:18:41,777 - INFO - 
+Scraping completed! Total records scraped: 0
+2025-09-07 16:18:41,777 - INFO - No new data to save
+2025-09-07 16:18:41,858 - INFO - Chrome driver closed
+2025-09-07 16:39:04,891 - INFO - No existing data file found. Starting fresh.
+2025-09-07 16:39:04,891 - INFO - No existing data found. Starting full scrape...
+2025-09-07 16:39:04,891 - INFO - Starting dollar scraper...
+2025-09-07 16:39:04,891 - INFO - Setting up Chrome driver...
+2025-09-07 16:39:04,891 - INFO - ====== WebDriver manager ======
+2025-09-07 16:39:05,048 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:39:05,092 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 16:39:05,140 - INFO - Driver [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-09-07 16:39:06,199 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 16:39:09,632 - INFO - Total records available: 3648
+2025-09-07 16:39:09,632 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 16:39:09,638 - INFO - Found 30 rows on current page
+2025-09-07 16:39:10,268 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:10,268 - INFO - Progress: 30/3648 (0.8%) - ETA: 10.8 minutes
+2025-09-07 16:39:13,309 - INFO - 
+--- Scraping Page 2 ---
+2025-09-07 16:39:13,324 - INFO - Found 30 rows on current page
+2025-09-07 16:39:13,951 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:13,951 - INFO - Progress: 60/3648 (1.6%) - ETA: 9.0 minutes
+2025-09-07 16:39:16,982 - INFO - 
+--- Scraping Page 3 ---
+2025-09-07 16:39:16,996 - INFO - Found 30 rows on current page
+2025-09-07 16:39:17,625 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:17,625 - INFO - Progress: 90/3648 (2.5%) - ETA: 8.4 minutes
+2025-09-07 16:39:20,655 - INFO - 
+--- Scraping Page 4 ---
+2025-09-07 16:39:20,660 - INFO - Found 30 rows on current page
+2025-09-07 16:39:21,299 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:21,299 - INFO - Progress: 120/3648 (3.3%) - ETA: 8.0 minutes
+2025-09-07 16:39:24,330 - INFO - 
+--- Scraping Page 5 ---
+2025-09-07 16:39:24,339 - INFO - Found 30 rows on current page
+2025-09-07 16:39:25,025 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:25,025 - INFO - Progress: 150/3648 (4.1%) - ETA: 7.8 minutes
+2025-09-07 16:39:28,049 - INFO - 
+--- Scraping Page 6 ---
+2025-09-07 16:39:28,064 - INFO - Found 30 rows on current page
+2025-09-07 16:39:28,738 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:28,738 - INFO - Progress: 180/3648 (4.9%) - ETA: 7.7 minutes
+2025-09-07 16:39:31,763 - INFO - 
+--- Scraping Page 7 ---
+2025-09-07 16:39:31,778 - INFO - Found 30 rows on current page
+2025-09-07 16:39:32,447 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:32,447 - INFO - Progress: 210/3648 (5.8%) - ETA: 7.5 minutes
+2025-09-07 16:39:35,479 - INFO - 
+--- Scraping Page 8 ---
+2025-09-07 16:39:35,488 - INFO - Found 30 rows on current page
+2025-09-07 16:39:36,141 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:36,141 - INFO - Progress: 240/3648 (6.6%) - ETA: 7.4 minutes
+2025-09-07 16:39:39,175 - INFO - 
+--- Scraping Page 9 ---
+2025-09-07 16:39:39,188 - INFO - Found 30 rows on current page
+2025-09-07 16:39:39,844 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:39,844 - INFO - Progress: 270/3648 (7.4%) - ETA: 7.3 minutes
+2025-09-07 16:39:42,875 - INFO - 
+--- Scraping Page 10 ---
+2025-09-07 16:39:42,879 - INFO - Found 30 rows on current page
+2025-09-07 16:39:43,538 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:43,538 - INFO - Progress: 300/3648 (8.2%) - ETA: 7.2 minutes
+2025-09-07 16:39:46,568 - INFO - 
+--- Scraping Page 11 ---
+2025-09-07 16:39:46,579 - INFO - Found 30 rows on current page
+2025-09-07 16:39:47,256 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:47,256 - INFO - Progress: 330/3648 (9.0%) - ETA: 7.1 minutes
+2025-09-07 16:39:50,281 - INFO - 
+--- Scraping Page 12 ---
+2025-09-07 16:39:50,288 - INFO - Found 30 rows on current page
+2025-09-07 16:39:50,959 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:50,959 - INFO - Progress: 360/3648 (9.9%) - ETA: 7.0 minutes
+2025-09-07 16:39:53,990 - INFO - 
+--- Scraping Page 13 ---
+2025-09-07 16:39:54,006 - INFO - Found 30 rows on current page
+2025-09-07 16:39:54,684 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:54,684 - INFO - Progress: 390/3648 (10.7%) - ETA: 6.9 minutes
+2025-09-07 16:39:57,715 - INFO - 
+--- Scraping Page 14 ---
+2025-09-07 16:39:57,724 - INFO - Found 30 rows on current page
+2025-09-07 16:39:58,465 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:39:58,465 - INFO - Progress: 420/3648 (11.5%) - ETA: 6.9 minutes
+2025-09-07 16:40:01,500 - INFO - 
+--- Scraping Page 15 ---
+2025-09-07 16:40:01,513 - INFO - Found 30 rows on current page
+2025-09-07 16:40:02,175 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:02,175 - INFO - Progress: 450/3648 (12.3%) - ETA: 6.8 minutes
+2025-09-07 16:40:05,204 - INFO - 
+--- Scraping Page 16 ---
+2025-09-07 16:40:05,216 - INFO - Found 30 rows on current page
+2025-09-07 16:40:05,892 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:05,892 - INFO - Progress: 480/3648 (13.2%) - ETA: 6.7 minutes
+2025-09-07 16:40:08,916 - INFO - 
+--- Scraping Page 17 ---
+2025-09-07 16:40:08,931 - INFO - Found 30 rows on current page
+2025-09-07 16:40:09,606 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:09,606 - INFO - Progress: 510/3648 (14.0%) - ETA: 6.6 minutes
+2025-09-07 16:40:12,634 - INFO - 
+--- Scraping Page 18 ---
+2025-09-07 16:40:12,638 - INFO - Found 30 rows on current page
+2025-09-07 16:40:13,277 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:13,278 - INFO - Progress: 540/3648 (14.8%) - ETA: 6.6 minutes
+2025-09-07 16:40:16,304 - INFO - 
+--- Scraping Page 19 ---
+2025-09-07 16:40:16,311 - INFO - Found 30 rows on current page
+2025-09-07 16:40:16,969 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:16,969 - INFO - Progress: 570/3648 (15.6%) - ETA: 6.5 minutes
+2025-09-07 16:40:19,998 - INFO - 
+--- Scraping Page 20 ---
+2025-09-07 16:40:20,004 - INFO - Found 30 rows on current page
+2025-09-07 16:40:20,678 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:20,678 - INFO - Progress: 600/3648 (16.4%) - ETA: 6.4 minutes
+2025-09-07 16:40:23,713 - INFO - 
+--- Scraping Page 21 ---
+2025-09-07 16:40:23,723 - INFO - Found 30 rows on current page
+2025-09-07 16:40:24,383 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:24,383 - INFO - Progress: 630/3648 (17.3%) - ETA: 6.3 minutes
+2025-09-07 16:40:27,412 - INFO - 
+--- Scraping Page 22 ---
+2025-09-07 16:40:27,420 - INFO - Found 30 rows on current page
+2025-09-07 16:40:28,109 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:28,109 - INFO - Progress: 660/3648 (18.1%) - ETA: 6.3 minutes
+2025-09-07 16:40:31,140 - INFO - 
+--- Scraping Page 23 ---
+2025-09-07 16:40:31,147 - INFO - Found 30 rows on current page
+2025-09-07 16:40:31,803 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:31,803 - INFO - Progress: 690/3648 (18.9%) - ETA: 6.2 minutes
+2025-09-07 16:40:34,837 - INFO - 
+--- Scraping Page 24 ---
+2025-09-07 16:40:34,848 - INFO - Found 30 rows on current page
+2025-09-07 16:40:35,527 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:35,528 - INFO - Progress: 720/3648 (19.7%) - ETA: 6.1 minutes
+2025-09-07 16:40:38,560 - INFO - 
+--- Scraping Page 25 ---
+2025-09-07 16:40:38,572 - INFO - Found 30 rows on current page
+2025-09-07 16:40:39,250 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:39,251 - INFO - Progress: 750/3648 (20.6%) - ETA: 6.1 minutes
+2025-09-07 16:40:42,282 - INFO - 
+--- Scraping Page 26 ---
+2025-09-07 16:40:42,294 - INFO - Found 30 rows on current page
+2025-09-07 16:40:42,962 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:42,962 - INFO - Progress: 780/3648 (21.4%) - ETA: 6.0 minutes
+2025-09-07 16:40:45,992 - INFO - 
+--- Scraping Page 27 ---
+2025-09-07 16:40:46,005 - INFO - Found 30 rows on current page
+2025-09-07 16:40:46,670 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:46,671 - INFO - Progress: 810/3648 (22.2%) - ETA: 5.9 minutes
+2025-09-07 16:40:49,704 - INFO - 
+--- Scraping Page 28 ---
+2025-09-07 16:40:49,718 - INFO - Found 30 rows on current page
+2025-09-07 16:40:50,394 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:50,394 - INFO - Progress: 840/3648 (23.0%) - ETA: 5.9 minutes
+2025-09-07 16:40:53,426 - INFO - 
+--- Scraping Page 29 ---
+2025-09-07 16:40:53,436 - INFO - Found 30 rows on current page
+2025-09-07 16:40:54,091 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:54,092 - INFO - Progress: 870/3648 (23.8%) - ETA: 5.8 minutes
+2025-09-07 16:40:57,122 - INFO - 
+--- Scraping Page 30 ---
+2025-09-07 16:40:57,138 - INFO - Found 30 rows on current page
+2025-09-07 16:40:57,788 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:40:57,789 - INFO - Progress: 900/3648 (24.7%) - ETA: 5.7 minutes
+2025-09-07 16:41:00,819 - INFO - 
+--- Scraping Page 31 ---
+2025-09-07 16:41:00,826 - INFO - Found 30 rows on current page
+2025-09-07 16:41:01,517 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 16:41:01,517 - INFO - Progress: 930/3648 (25.5%) - ETA: 5.7 minutes
+2025-09-07 16:41:03,019 - INFO - Scraping interrupted by user
+2025-09-07 16:41:03,020 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(54, 'Connection reset by peer')': /session/516136bc11df790814273c37e7e92f27
+2025-09-07 16:41:03,021 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14625cca0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/516136bc11df790814273c37e7e92f27
+2025-09-07 16:41:03,022 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x14625cfd0>: Failed to establish a new connection: [Errno 61] Connection refused')': /session/516136bc11df790814273c37e7e92f27
+2025-09-07 16:41:03,024 - INFO - Chrome driver closed
+2025-09-07 16:41:36,523 - INFO - Successfully saved 3 records to data/usd_irr_historical_data.csv
+2025-09-07 16:54:03,915 - INFO - Successfully saved 3 records to data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 17:39:14,479 - INFO - No existing data file found. Starting fresh.
+2025-09-07 17:39:14,482 - INFO - No existing data found. Starting full scrape...
+2025-09-07 17:39:14,482 - INFO - Starting dollar scraper...
+2025-09-07 17:39:14,482 - INFO - Setting up Chrome driver...
+2025-09-07 17:39:14,482 - INFO - ====== WebDriver manager ======
+2025-09-07 17:39:14,630 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 17:39:14,683 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 17:39:14,718 - INFO - Driver [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-09-07 17:39:15,916 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 17:39:19,704 - INFO - Total records available: 3648
+2025-09-07 17:39:19,704 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 17:39:19,711 - INFO - Found 30 rows on current page
+2025-09-07 17:39:20,351 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:20,352 - INFO - Progress: 30/3648 (0.8%) - ETA: 11.8 minutes
+2025-09-07 17:39:23,395 - INFO - 
+--- Scraping Page 2 ---
+2025-09-07 17:39:23,409 - INFO - Found 30 rows on current page
+2025-09-07 17:39:24,043 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:24,043 - INFO - Progress: 60/3648 (1.6%) - ETA: 9.5 minutes
+2025-09-07 17:39:27,072 - INFO - 
+--- Scraping Page 3 ---
+2025-09-07 17:39:27,086 - INFO - Found 30 rows on current page
+2025-09-07 17:39:27,719 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:27,719 - INFO - Progress: 90/3648 (2.5%) - ETA: 8.7 minutes
+2025-09-07 17:39:30,746 - INFO - 
+--- Scraping Page 4 ---
+2025-09-07 17:39:30,759 - INFO - Found 30 rows on current page
+2025-09-07 17:39:31,412 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:31,412 - INFO - Progress: 120/3648 (3.3%) - ETA: 8.3 minutes
+2025-09-07 17:39:34,447 - INFO - 
+--- Scraping Page 5 ---
+2025-09-07 17:39:34,462 - INFO - Found 30 rows on current page
+2025-09-07 17:39:35,143 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:35,143 - INFO - Progress: 150/3648 (4.1%) - ETA: 8.0 minutes
+2025-09-07 17:39:38,177 - INFO - 
+--- Scraping Page 6 ---
+2025-09-07 17:39:38,192 - INFO - Found 30 rows on current page
+2025-09-07 17:39:38,838 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:38,838 - INFO - Progress: 180/3648 (4.9%) - ETA: 7.8 minutes
+2025-09-07 17:39:41,862 - INFO - 
+--- Scraping Page 7 ---
+2025-09-07 17:39:41,876 - INFO - Found 30 rows on current page
+2025-09-07 17:39:42,526 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:42,526 - INFO - Progress: 210/3648 (5.8%) - ETA: 7.7 minutes
+2025-09-07 17:39:45,559 - INFO - 
+--- Scraping Page 8 ---
+2025-09-07 17:39:45,568 - INFO - Found 30 rows on current page
+2025-09-07 17:39:46,232 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:46,232 - INFO - Progress: 240/3648 (6.6%) - ETA: 7.5 minutes
+2025-09-07 17:39:49,265 - INFO - 
+--- Scraping Page 9 ---
+2025-09-07 17:39:49,273 - INFO - Found 30 rows on current page
+2025-09-07 17:39:49,928 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:49,928 - INFO - Progress: 270/3648 (7.4%) - ETA: 7.4 minutes
+2025-09-07 17:39:52,955 - INFO - 
+--- Scraping Page 10 ---
+2025-09-07 17:39:52,970 - INFO - Found 30 rows on current page
+2025-09-07 17:39:53,626 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:53,627 - INFO - Progress: 300/3648 (8.2%) - ETA: 7.3 minutes
+2025-09-07 17:39:56,661 - INFO - 
+--- Scraping Page 11 ---
+2025-09-07 17:39:56,673 - INFO - Found 30 rows on current page
+2025-09-07 17:39:57,330 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:39:57,330 - INFO - Progress: 330/3648 (9.0%) - ETA: 7.2 minutes
+2025-09-07 17:40:00,364 - INFO - 
+--- Scraping Page 12 ---
+2025-09-07 17:40:00,380 - INFO - Found 30 rows on current page
+2025-09-07 17:40:01,040 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:01,040 - INFO - Progress: 360/3648 (9.9%) - ETA: 7.1 minutes
+2025-09-07 17:40:04,075 - INFO - 
+--- Scraping Page 13 ---
+2025-09-07 17:40:04,092 - INFO - Found 30 rows on current page
+2025-09-07 17:40:04,749 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:04,749 - INFO - Progress: 390/3648 (10.7%) - ETA: 7.0 minutes
+2025-09-07 17:40:07,786 - INFO - 
+--- Scraping Page 14 ---
+2025-09-07 17:40:07,800 - INFO - Found 30 rows on current page
+2025-09-07 17:40:08,450 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:08,450 - INFO - Progress: 420/3648 (11.5%) - ETA: 6.9 minutes
+2025-09-07 17:40:11,487 - INFO - 
+--- Scraping Page 15 ---
+2025-09-07 17:40:11,502 - INFO - Found 30 rows on current page
+2025-09-07 17:40:12,151 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:12,151 - INFO - Progress: 450/3648 (12.3%) - ETA: 6.8 minutes
+2025-09-07 17:40:15,180 - INFO - 
+--- Scraping Page 16 ---
+2025-09-07 17:40:15,185 - INFO - Found 30 rows on current page
+2025-09-07 17:40:15,828 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:15,828 - INFO - Progress: 480/3648 (13.2%) - ETA: 6.7 minutes
+2025-09-07 17:40:18,852 - INFO - 
+--- Scraping Page 17 ---
+2025-09-07 17:40:18,866 - INFO - Found 30 rows on current page
+2025-09-07 17:40:19,521 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:19,521 - INFO - Progress: 510/3648 (14.0%) - ETA: 6.7 minutes
+2025-09-07 17:40:22,555 - INFO - 
+--- Scraping Page 18 ---
+2025-09-07 17:40:22,569 - INFO - Found 30 rows on current page
+2025-09-07 17:40:23,214 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:23,214 - INFO - Progress: 540/3648 (14.8%) - ETA: 6.6 minutes
+2025-09-07 17:40:26,242 - INFO - 
+--- Scraping Page 19 ---
+2025-09-07 17:40:26,256 - INFO - Found 30 rows on current page
+2025-09-07 17:40:26,913 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:26,913 - INFO - Progress: 570/3648 (15.6%) - ETA: 6.5 minutes
+2025-09-07 17:40:29,948 - INFO - 
+--- Scraping Page 20 ---
+2025-09-07 17:40:29,956 - INFO - Found 30 rows on current page
+2025-09-07 17:40:30,609 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:30,610 - INFO - Progress: 600/3648 (16.4%) - ETA: 6.4 minutes
+2025-09-07 17:40:33,646 - INFO - 
+--- Scraping Page 21 ---
+2025-09-07 17:40:33,652 - INFO - Found 30 rows on current page
+2025-09-07 17:40:34,308 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:34,308 - INFO - Progress: 630/3648 (17.3%) - ETA: 6.4 minutes
+2025-09-07 17:40:37,345 - INFO - 
+--- Scraping Page 22 ---
+2025-09-07 17:40:37,357 - INFO - Found 30 rows on current page
+2025-09-07 17:40:38,019 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:38,019 - INFO - Progress: 660/3648 (18.1%) - ETA: 6.3 minutes
+2025-09-07 17:40:41,045 - INFO - 
+--- Scraping Page 23 ---
+2025-09-07 17:40:41,057 - INFO - Found 30 rows on current page
+2025-09-07 17:40:41,706 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:41,706 - INFO - Progress: 690/3648 (18.9%) - ETA: 6.2 minutes
+2025-09-07 17:40:44,741 - INFO - 
+--- Scraping Page 24 ---
+2025-09-07 17:40:44,750 - INFO - Found 30 rows on current page
+2025-09-07 17:40:45,408 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:45,408 - INFO - Progress: 720/3648 (19.7%) - ETA: 6.2 minutes
+2025-09-07 17:40:48,445 - INFO - 
+--- Scraping Page 25 ---
+2025-09-07 17:40:48,460 - INFO - Found 30 rows on current page
+2025-09-07 17:40:49,108 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:49,108 - INFO - Progress: 750/3648 (20.6%) - ETA: 6.1 minutes
+2025-09-07 17:40:52,144 - INFO - 
+--- Scraping Page 26 ---
+2025-09-07 17:40:52,159 - INFO - Found 30 rows on current page
+2025-09-07 17:40:52,807 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:52,807 - INFO - Progress: 780/3648 (21.4%) - ETA: 6.0 minutes
+2025-09-07 17:40:55,842 - INFO - 
+--- Scraping Page 27 ---
+2025-09-07 17:40:55,859 - INFO - Found 30 rows on current page
+2025-09-07 17:40:56,517 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:40:56,517 - INFO - Progress: 810/3648 (22.2%) - ETA: 6.0 minutes
+2025-09-07 17:40:59,552 - INFO - 
+--- Scraping Page 28 ---
+2025-09-07 17:40:59,566 - INFO - Found 30 rows on current page
+2025-09-07 17:41:00,223 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:00,223 - INFO - Progress: 840/3648 (23.0%) - ETA: 5.9 minutes
+2025-09-07 17:41:03,254 - INFO - 
+--- Scraping Page 29 ---
+2025-09-07 17:41:03,270 - INFO - Found 30 rows on current page
+2025-09-07 17:41:03,920 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:03,920 - INFO - Progress: 870/3648 (23.8%) - ETA: 5.8 minutes
+2025-09-07 17:41:06,942 - INFO - 
+--- Scraping Page 30 ---
+2025-09-07 17:41:06,946 - INFO - Found 30 rows on current page
+2025-09-07 17:41:07,681 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:07,681 - INFO - Progress: 900/3648 (24.7%) - ETA: 5.8 minutes
+2025-09-07 17:41:10,707 - INFO - 
+--- Scraping Page 31 ---
+2025-09-07 17:41:10,718 - INFO - Found 30 rows on current page
+2025-09-07 17:41:11,372 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:11,372 - INFO - Progress: 930/3648 (25.5%) - ETA: 5.7 minutes
+2025-09-07 17:41:14,408 - INFO - 
+--- Scraping Page 32 ---
+2025-09-07 17:41:14,420 - INFO - Found 30 rows on current page
+2025-09-07 17:41:15,070 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:15,070 - INFO - Progress: 960/3648 (26.3%) - ETA: 5.6 minutes
+2025-09-07 17:41:18,097 - INFO - 
+--- Scraping Page 33 ---
+2025-09-07 17:41:18,101 - INFO - Found 30 rows on current page
+2025-09-07 17:41:18,736 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:18,736 - INFO - Progress: 990/3648 (27.1%) - ETA: 5.6 minutes
+2025-09-07 17:41:21,765 - INFO - 
+--- Scraping Page 34 ---
+2025-09-07 17:41:21,781 - INFO - Found 30 rows on current page
+2025-09-07 17:41:22,438 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:22,438 - INFO - Progress: 1020/3648 (28.0%) - ETA: 5.5 minutes
+2025-09-07 17:41:25,473 - INFO - 
+--- Scraping Page 35 ---
+2025-09-07 17:41:25,482 - INFO - Found 30 rows on current page
+2025-09-07 17:41:26,140 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:26,140 - INFO - Progress: 1050/3648 (28.8%) - ETA: 5.4 minutes
+2025-09-07 17:41:29,175 - INFO - 
+--- Scraping Page 36 ---
+2025-09-07 17:41:29,185 - INFO - Found 30 rows on current page
+2025-09-07 17:41:29,849 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:29,849 - INFO - Progress: 1080/3648 (29.6%) - ETA: 5.4 minutes
+2025-09-07 17:41:32,886 - INFO - 
+--- Scraping Page 37 ---
+2025-09-07 17:41:32,900 - INFO - Found 30 rows on current page
+2025-09-07 17:41:33,553 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:33,553 - INFO - Progress: 1110/3648 (30.4%) - ETA: 5.3 minutes
+2025-09-07 17:41:36,588 - INFO - 
+--- Scraping Page 38 ---
+2025-09-07 17:41:36,603 - INFO - Found 30 rows on current page
+2025-09-07 17:41:37,255 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:37,255 - INFO - Progress: 1140/3648 (31.2%) - ETA: 5.2 minutes
+2025-09-07 17:41:40,286 - INFO - 
+--- Scraping Page 39 ---
+2025-09-07 17:41:40,290 - INFO - Found 30 rows on current page
+2025-09-07 17:41:40,931 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:40,931 - INFO - Progress: 1170/3648 (32.1%) - ETA: 5.2 minutes
+2025-09-07 17:41:43,968 - INFO - 
+--- Scraping Page 40 ---
+2025-09-07 17:41:43,983 - INFO - Found 30 rows on current page
+2025-09-07 17:41:44,633 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:44,633 - INFO - Progress: 1200/3648 (32.9%) - ETA: 5.1 minutes
+2025-09-07 17:41:47,667 - INFO - 
+--- Scraping Page 41 ---
+2025-09-07 17:41:47,682 - INFO - Found 30 rows on current page
+2025-09-07 17:41:48,331 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:48,331 - INFO - Progress: 1230/3648 (33.7%) - ETA: 5.0 minutes
+2025-09-07 17:41:51,360 - INFO - 
+--- Scraping Page 42 ---
+2025-09-07 17:41:51,374 - INFO - Found 30 rows on current page
+2025-09-07 17:41:52,022 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:52,022 - INFO - Progress: 1260/3648 (34.5%) - ETA: 5.0 minutes
+2025-09-07 17:41:55,053 - INFO - 
+--- Scraping Page 43 ---
+2025-09-07 17:41:55,068 - INFO - Found 30 rows on current page
+2025-09-07 17:41:55,720 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:55,720 - INFO - Progress: 1290/3648 (35.4%) - ETA: 4.9 minutes
+2025-09-07 17:41:58,755 - INFO - 
+--- Scraping Page 44 ---
+2025-09-07 17:41:58,770 - INFO - Found 30 rows on current page
+2025-09-07 17:41:59,424 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:41:59,424 - INFO - Progress: 1320/3648 (36.2%) - ETA: 4.8 minutes
+2025-09-07 17:42:02,460 - INFO - 
+--- Scraping Page 45 ---
+2025-09-07 17:42:02,474 - INFO - Found 30 rows on current page
+2025-09-07 17:42:03,125 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:03,125 - INFO - Progress: 1350/3648 (37.0%) - ETA: 4.8 minutes
+2025-09-07 17:42:06,158 - INFO - 
+--- Scraping Page 46 ---
+2025-09-07 17:42:06,173 - INFO - Found 30 rows on current page
+2025-09-07 17:42:06,816 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:06,816 - INFO - Progress: 1380/3648 (37.8%) - ETA: 4.7 minutes
+2025-09-07 17:42:09,850 - INFO - 
+--- Scraping Page 47 ---
+2025-09-07 17:42:09,861 - INFO - Found 30 rows on current page
+2025-09-07 17:42:10,522 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:10,522 - INFO - Progress: 1410/3648 (38.7%) - ETA: 4.7 minutes
+2025-09-07 17:42:13,556 - INFO - 
+--- Scraping Page 48 ---
+2025-09-07 17:42:13,571 - INFO - Found 30 rows on current page
+2025-09-07 17:42:14,235 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:14,235 - INFO - Progress: 1440/3648 (39.5%) - ETA: 4.6 minutes
+2025-09-07 17:42:17,268 - INFO - 
+--- Scraping Page 49 ---
+2025-09-07 17:42:17,277 - INFO - Found 30 rows on current page
+2025-09-07 17:42:17,929 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:17,929 - INFO - Progress: 1470/3648 (40.3%) - ETA: 4.5 minutes
+2025-09-07 17:42:20,962 - INFO - 
+--- Scraping Page 50 ---
+2025-09-07 17:42:20,971 - INFO - Found 30 rows on current page
+2025-09-07 17:42:21,628 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:21,628 - INFO - Progress: 1500/3648 (41.1%) - ETA: 4.5 minutes
+2025-09-07 17:42:24,662 - INFO - 
+--- Scraping Page 51 ---
+2025-09-07 17:42:24,677 - INFO - Found 30 rows on current page
+2025-09-07 17:42:25,341 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:25,341 - INFO - Progress: 1530/3648 (41.9%) - ETA: 4.4 minutes
+2025-09-07 17:42:28,375 - INFO - 
+--- Scraping Page 52 ---
+2025-09-07 17:42:28,391 - INFO - Found 30 rows on current page
+2025-09-07 17:42:29,042 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:29,042 - INFO - Progress: 1560/3648 (42.8%) - ETA: 4.3 minutes
+2025-09-07 17:42:32,077 - INFO - 
+--- Scraping Page 53 ---
+2025-09-07 17:42:32,092 - INFO - Found 30 rows on current page
+2025-09-07 17:42:32,738 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:32,738 - INFO - Progress: 1590/3648 (43.6%) - ETA: 4.3 minutes
+2025-09-07 17:42:35,773 - INFO - 
+--- Scraping Page 54 ---
+2025-09-07 17:42:35,785 - INFO - Found 30 rows on current page
+2025-09-07 17:42:36,435 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:36,435 - INFO - Progress: 1620/3648 (44.4%) - ETA: 4.2 minutes
+2025-09-07 17:42:39,464 - INFO - 
+--- Scraping Page 55 ---
+2025-09-07 17:42:39,479 - INFO - Found 30 rows on current page
+2025-09-07 17:42:40,133 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:40,133 - INFO - Progress: 1650/3648 (45.2%) - ETA: 4.2 minutes
+2025-09-07 17:42:43,166 - INFO - 
+--- Scraping Page 56 ---
+2025-09-07 17:42:43,182 - INFO - Found 30 rows on current page
+2025-09-07 17:42:43,824 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:43,824 - INFO - Progress: 1680/3648 (46.1%) - ETA: 4.1 minutes
+2025-09-07 17:42:46,853 - INFO - 
+--- Scraping Page 57 ---
+2025-09-07 17:42:46,868 - INFO - Found 30 rows on current page
+2025-09-07 17:42:47,516 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:47,516 - INFO - Progress: 1710/3648 (46.9%) - ETA: 4.0 minutes
+2025-09-07 17:42:50,548 - INFO - 
+--- Scraping Page 58 ---
+2025-09-07 17:42:50,564 - INFO - Found 30 rows on current page
+2025-09-07 17:42:51,209 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:51,209 - INFO - Progress: 1740/3648 (47.7%) - ETA: 4.0 minutes
+2025-09-07 17:42:54,245 - INFO - 
+--- Scraping Page 59 ---
+2025-09-07 17:42:54,253 - INFO - Found 30 rows on current page
+2025-09-07 17:42:54,905 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:54,906 - INFO - Progress: 1770/3648 (48.5%) - ETA: 3.9 minutes
+2025-09-07 17:42:57,940 - INFO - 
+--- Scraping Page 60 ---
+2025-09-07 17:42:57,954 - INFO - Found 30 rows on current page
+2025-09-07 17:42:58,601 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:42:58,601 - INFO - Progress: 1800/3648 (49.3%) - ETA: 3.8 minutes
+2025-09-07 17:43:01,635 - INFO - 
+--- Scraping Page 61 ---
+2025-09-07 17:43:01,648 - INFO - Found 30 rows on current page
+2025-09-07 17:43:02,305 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:02,305 - INFO - Progress: 1830/3648 (50.2%) - ETA: 3.8 minutes
+2025-09-07 17:43:05,331 - INFO - 
+--- Scraping Page 62 ---
+2025-09-07 17:43:05,336 - INFO - Found 30 rows on current page
+2025-09-07 17:43:05,977 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:05,977 - INFO - Progress: 1860/3648 (51.0%) - ETA: 3.7 minutes
+2025-09-07 17:43:09,007 - INFO - 
+--- Scraping Page 63 ---
+2025-09-07 17:43:09,016 - INFO - Found 30 rows on current page
+2025-09-07 17:43:09,676 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:09,676 - INFO - Progress: 1890/3648 (51.8%) - ETA: 3.6 minutes
+2025-09-07 17:43:12,708 - INFO - 
+--- Scraping Page 64 ---
+2025-09-07 17:43:12,724 - INFO - Found 30 rows on current page
+2025-09-07 17:43:13,383 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:13,383 - INFO - Progress: 1920/3648 (52.6%) - ETA: 3.6 minutes
+2025-09-07 17:43:16,411 - INFO - 
+--- Scraping Page 65 ---
+2025-09-07 17:43:16,422 - INFO - Found 30 rows on current page
+2025-09-07 17:43:17,070 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:17,070 - INFO - Progress: 1950/3648 (53.5%) - ETA: 3.5 minutes
+2025-09-07 17:43:20,104 - INFO - 
+--- Scraping Page 66 ---
+2025-09-07 17:43:20,117 - INFO - Found 30 rows on current page
+2025-09-07 17:43:20,772 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:20,772 - INFO - Progress: 1980/3648 (54.3%) - ETA: 3.5 minutes
+2025-09-07 17:43:23,804 - INFO - 
+--- Scraping Page 67 ---
+2025-09-07 17:43:23,818 - INFO - Found 30 rows on current page
+2025-09-07 17:43:24,468 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:24,468 - INFO - Progress: 2010/3648 (55.1%) - ETA: 3.4 minutes
+2025-09-07 17:43:27,503 - INFO - 
+--- Scraping Page 68 ---
+2025-09-07 17:43:27,517 - INFO - Found 30 rows on current page
+2025-09-07 17:43:28,165 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:28,166 - INFO - Progress: 2040/3648 (55.9%) - ETA: 3.3 minutes
+2025-09-07 17:43:31,196 - INFO - 
+--- Scraping Page 69 ---
+2025-09-07 17:43:31,212 - INFO - Found 30 rows on current page
+2025-09-07 17:43:31,861 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:31,861 - INFO - Progress: 2070/3648 (56.7%) - ETA: 3.3 minutes
+2025-09-07 17:43:34,893 - INFO - 
+--- Scraping Page 70 ---
+2025-09-07 17:43:34,905 - INFO - Found 30 rows on current page
+2025-09-07 17:43:35,563 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:35,563 - INFO - Progress: 2100/3648 (57.6%) - ETA: 3.2 minutes
+2025-09-07 17:43:38,599 - INFO - 
+--- Scraping Page 71 ---
+2025-09-07 17:43:38,613 - INFO - Found 30 rows on current page
+2025-09-07 17:43:39,269 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:39,270 - INFO - Progress: 2130/3648 (58.4%) - ETA: 3.1 minutes
+2025-09-07 17:43:42,301 - INFO - 
+--- Scraping Page 72 ---
+2025-09-07 17:43:42,311 - INFO - Found 30 rows on current page
+2025-09-07 17:43:42,957 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:42,957 - INFO - Progress: 2160/3648 (59.2%) - ETA: 3.1 minutes
+2025-09-07 17:43:45,987 - INFO - 
+--- Scraping Page 73 ---
+2025-09-07 17:43:45,995 - INFO - Found 30 rows on current page
+2025-09-07 17:43:46,615 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:46,615 - INFO - Progress: 2190/3648 (60.0%) - ETA: 3.0 minutes
+2025-09-07 17:43:49,650 - INFO - 
+--- Scraping Page 74 ---
+2025-09-07 17:43:49,660 - INFO - Found 30 rows on current page
+2025-09-07 17:43:50,319 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:50,319 - INFO - Progress: 2220/3648 (60.9%) - ETA: 3.0 minutes
+2025-09-07 17:43:53,353 - INFO - 
+--- Scraping Page 75 ---
+2025-09-07 17:43:53,367 - INFO - Found 30 rows on current page
+2025-09-07 17:43:54,025 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:54,025 - INFO - Progress: 2250/3648 (61.7%) - ETA: 2.9 minutes
+2025-09-07 17:43:57,061 - INFO - 
+--- Scraping Page 76 ---
+2025-09-07 17:43:57,074 - INFO - Found 30 rows on current page
+2025-09-07 17:43:57,735 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:43:57,735 - INFO - Progress: 2280/3648 (62.5%) - ETA: 2.8 minutes
+2025-09-07 17:44:00,766 - INFO - 
+--- Scraping Page 77 ---
+2025-09-07 17:44:00,777 - INFO - Found 30 rows on current page
+2025-09-07 17:44:01,439 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:01,439 - INFO - Progress: 2310/3648 (63.3%) - ETA: 2.8 minutes
+2025-09-07 17:44:04,471 - INFO - 
+--- Scraping Page 78 ---
+2025-09-07 17:44:04,486 - INFO - Found 30 rows on current page
+2025-09-07 17:44:05,152 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:05,153 - INFO - Progress: 2340/3648 (64.1%) - ETA: 2.7 minutes
+2025-09-07 17:44:08,187 - INFO - 
+--- Scraping Page 79 ---
+2025-09-07 17:44:08,201 - INFO - Found 30 rows on current page
+2025-09-07 17:44:08,848 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:08,848 - INFO - Progress: 2370/3648 (65.0%) - ETA: 2.6 minutes
+2025-09-07 17:44:11,883 - INFO - 
+--- Scraping Page 80 ---
+2025-09-07 17:44:11,896 - INFO - Found 30 rows on current page
+2025-09-07 17:44:12,545 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:12,545 - INFO - Progress: 2400/3648 (65.8%) - ETA: 2.6 minutes
+2025-09-07 17:44:15,582 - INFO - 
+--- Scraping Page 81 ---
+2025-09-07 17:44:15,593 - INFO - Found 30 rows on current page
+2025-09-07 17:44:16,253 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:16,253 - INFO - Progress: 2430/3648 (66.6%) - ETA: 2.5 minutes
+2025-09-07 17:44:19,289 - INFO - 
+--- Scraping Page 82 ---
+2025-09-07 17:44:19,297 - INFO - Found 30 rows on current page
+2025-09-07 17:44:19,949 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:19,949 - INFO - Progress: 2460/3648 (67.4%) - ETA: 2.5 minutes
+2025-09-07 17:44:22,981 - INFO - 
+--- Scraping Page 83 ---
+2025-09-07 17:44:22,993 - INFO - Found 30 rows on current page
+2025-09-07 17:44:23,641 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:23,641 - INFO - Progress: 2490/3648 (68.3%) - ETA: 2.4 minutes
+2025-09-07 17:44:26,674 - INFO - 
+--- Scraping Page 84 ---
+2025-09-07 17:44:26,689 - INFO - Found 30 rows on current page
+2025-09-07 17:44:27,343 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:27,343 - INFO - Progress: 2520/3648 (69.1%) - ETA: 2.3 minutes
+2025-09-07 17:44:30,373 - INFO - 
+--- Scraping Page 85 ---
+2025-09-07 17:44:30,378 - INFO - Found 30 rows on current page
+2025-09-07 17:44:31,025 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:31,025 - INFO - Progress: 2550/3648 (69.9%) - ETA: 2.3 minutes
+2025-09-07 17:44:34,055 - INFO - 
+--- Scraping Page 86 ---
+2025-09-07 17:44:34,064 - INFO - Found 30 rows on current page
+2025-09-07 17:44:34,723 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:34,723 - INFO - Progress: 2580/3648 (70.7%) - ETA: 2.2 minutes
+2025-09-07 17:44:37,758 - INFO - 
+--- Scraping Page 87 ---
+2025-09-07 17:44:37,772 - INFO - Found 30 rows on current page
+2025-09-07 17:44:38,426 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:38,426 - INFO - Progress: 2610/3648 (71.5%) - ETA: 2.1 minutes
+2025-09-07 17:44:41,454 - INFO - 
+--- Scraping Page 88 ---
+2025-09-07 17:44:41,468 - INFO - Found 30 rows on current page
+2025-09-07 17:44:42,126 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:42,126 - INFO - Progress: 2640/3648 (72.4%) - ETA: 2.1 minutes
+2025-09-07 17:44:45,161 - INFO - 
+--- Scraping Page 89 ---
+2025-09-07 17:44:45,171 - INFO - Found 30 rows on current page
+2025-09-07 17:44:45,830 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:45,830 - INFO - Progress: 2670/3648 (73.2%) - ETA: 2.0 minutes
+2025-09-07 17:44:48,864 - INFO - 
+--- Scraping Page 90 ---
+2025-09-07 17:44:48,878 - INFO - Found 30 rows on current page
+2025-09-07 17:44:49,540 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:49,540 - INFO - Progress: 2700/3648 (74.0%) - ETA: 2.0 minutes
+2025-09-07 17:44:52,576 - INFO - 
+--- Scraping Page 91 ---
+2025-09-07 17:44:52,590 - INFO - Found 30 rows on current page
+2025-09-07 17:44:53,242 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:53,242 - INFO - Progress: 2730/3648 (74.8%) - ETA: 1.9 minutes
+2025-09-07 17:44:56,277 - INFO - 
+--- Scraping Page 92 ---
+2025-09-07 17:44:56,290 - INFO - Found 30 rows on current page
+2025-09-07 17:44:56,938 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:44:56,938 - INFO - Progress: 2760/3648 (75.7%) - ETA: 1.8 minutes
+2025-09-07 17:44:59,974 - INFO - 
+--- Scraping Page 93 ---
+2025-09-07 17:44:59,990 - INFO - Found 30 rows on current page
+2025-09-07 17:45:00,646 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:00,646 - INFO - Progress: 2790/3648 (76.5%) - ETA: 1.8 minutes
+2025-09-07 17:45:03,681 - INFO - 
+--- Scraping Page 94 ---
+2025-09-07 17:45:03,697 - INFO - Found 30 rows on current page
+2025-09-07 17:45:04,353 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:04,353 - INFO - Progress: 2820/3648 (77.3%) - ETA: 1.7 minutes
+2025-09-07 17:45:07,390 - INFO - 
+--- Scraping Page 95 ---
+2025-09-07 17:45:07,407 - INFO - Found 30 rows on current page
+2025-09-07 17:45:08,061 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:08,061 - INFO - Progress: 2850/3648 (78.1%) - ETA: 1.7 minutes
+2025-09-07 17:45:11,093 - INFO - 
+--- Scraping Page 96 ---
+2025-09-07 17:45:11,103 - INFO - Found 30 rows on current page
+2025-09-07 17:45:11,756 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:11,757 - INFO - Progress: 2880/3648 (78.9%) - ETA: 1.6 minutes
+2025-09-07 17:45:14,795 - INFO - 
+--- Scraping Page 97 ---
+2025-09-07 17:45:14,808 - INFO - Found 30 rows on current page
+2025-09-07 17:45:15,468 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:15,468 - INFO - Progress: 2910/3648 (79.8%) - ETA: 1.5 minutes
+2025-09-07 17:45:18,502 - INFO - 
+--- Scraping Page 98 ---
+2025-09-07 17:45:18,518 - INFO - Found 30 rows on current page
+2025-09-07 17:45:19,174 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:19,174 - INFO - Progress: 2940/3648 (80.6%) - ETA: 1.5 minutes
+2025-09-07 17:45:22,210 - INFO - 
+--- Scraping Page 99 ---
+2025-09-07 17:45:22,224 - INFO - Found 30 rows on current page
+2025-09-07 17:45:22,881 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:22,881 - INFO - Progress: 2970/3648 (81.4%) - ETA: 1.4 minutes
+2025-09-07 17:45:25,911 - INFO - 
+--- Scraping Page 100 ---
+2025-09-07 17:45:25,919 - INFO - Found 30 rows on current page
+2025-09-07 17:45:26,580 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:26,580 - INFO - Progress: 3000/3648 (82.2%) - ETA: 1.3 minutes
+2025-09-07 17:45:29,615 - INFO - 
+--- Scraping Page 101 ---
+2025-09-07 17:45:29,624 - INFO - Found 30 rows on current page
+2025-09-07 17:45:30,283 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:30,283 - INFO - Progress: 3030/3648 (83.1%) - ETA: 1.3 minutes
+2025-09-07 17:45:33,318 - INFO - 
+--- Scraping Page 102 ---
+2025-09-07 17:45:33,332 - INFO - Found 30 rows on current page
+2025-09-07 17:45:33,988 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:33,989 - INFO - Progress: 3060/3648 (83.9%) - ETA: 1.2 minutes
+2025-09-07 17:45:37,024 - INFO - 
+--- Scraping Page 103 ---
+2025-09-07 17:45:37,041 - INFO - Found 30 rows on current page
+2025-09-07 17:45:37,691 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:37,691 - INFO - Progress: 3090/3648 (84.7%) - ETA: 1.2 minutes
+2025-09-07 17:45:40,722 - INFO - 
+--- Scraping Page 104 ---
+2025-09-07 17:45:40,733 - INFO - Found 30 rows on current page
+2025-09-07 17:45:41,388 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:41,388 - INFO - Progress: 3120/3648 (85.5%) - ETA: 1.1 minutes
+2025-09-07 17:45:44,423 - INFO - 
+--- Scraping Page 105 ---
+2025-09-07 17:45:44,437 - INFO - Found 30 rows on current page
+2025-09-07 17:45:45,101 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:45,101 - INFO - Progress: 3150/3648 (86.3%) - ETA: 1.0 minutes
+2025-09-07 17:45:48,136 - INFO - 
+--- Scraping Page 106 ---
+2025-09-07 17:45:48,150 - INFO - Found 30 rows on current page
+2025-09-07 17:45:48,798 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:48,798 - INFO - Progress: 3180/3648 (87.2%) - ETA: 1.0 minutes
+2025-09-07 17:45:51,833 - INFO - 
+--- Scraping Page 107 ---
+2025-09-07 17:45:51,847 - INFO - Found 30 rows on current page
+2025-09-07 17:45:52,499 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:52,499 - INFO - Progress: 3210/3648 (88.0%) - ETA: 0.9 minutes
+2025-09-07 17:45:55,533 - INFO - 
+--- Scraping Page 108 ---
+2025-09-07 17:45:55,539 - INFO - Found 30 rows on current page
+2025-09-07 17:45:56,185 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:56,185 - INFO - Progress: 3240/3648 (88.8%) - ETA: 0.8 minutes
+2025-09-07 17:45:59,215 - INFO - 
+--- Scraping Page 109 ---
+2025-09-07 17:45:59,230 - INFO - Found 30 rows on current page
+2025-09-07 17:45:59,883 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:45:59,883 - INFO - Progress: 3270/3648 (89.6%) - ETA: 0.8 minutes
+2025-09-07 17:46:02,919 - INFO - 
+--- Scraping Page 110 ---
+2025-09-07 17:46:02,933 - INFO - Found 30 rows on current page
+2025-09-07 17:46:03,576 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:03,576 - INFO - Progress: 3300/3648 (90.5%) - ETA: 0.7 minutes
+2025-09-07 17:46:06,600 - INFO - 
+--- Scraping Page 111 ---
+2025-09-07 17:46:06,607 - INFO - Found 30 rows on current page
+2025-09-07 17:46:07,262 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:07,262 - INFO - Progress: 3330/3648 (91.3%) - ETA: 0.7 minutes
+2025-09-07 17:46:10,296 - INFO - 
+--- Scraping Page 112 ---
+2025-09-07 17:46:10,305 - INFO - Found 30 rows on current page
+2025-09-07 17:46:10,973 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:10,973 - INFO - Progress: 3360/3648 (92.1%) - ETA: 0.6 minutes
+2025-09-07 17:46:14,017 - INFO - 
+--- Scraping Page 113 ---
+2025-09-07 17:46:14,026 - INFO - Found 30 rows on current page
+2025-09-07 17:46:14,684 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:14,684 - INFO - Progress: 3390/3648 (92.9%) - ETA: 0.5 minutes
+2025-09-07 17:46:17,729 - INFO - 
+--- Scraping Page 114 ---
+2025-09-07 17:46:17,744 - INFO - Found 30 rows on current page
+2025-09-07 17:46:18,393 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:18,393 - INFO - Progress: 3420/3648 (93.8%) - ETA: 0.5 minutes
+2025-09-07 17:46:21,431 - INFO - 
+--- Scraping Page 115 ---
+2025-09-07 17:46:21,446 - INFO - Found 30 rows on current page
+2025-09-07 17:46:22,107 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:22,107 - INFO - Progress: 3450/3648 (94.6%) - ETA: 0.4 minutes
+2025-09-07 17:46:25,152 - INFO - 
+--- Scraping Page 116 ---
+2025-09-07 17:46:25,162 - INFO - Found 30 rows on current page
+2025-09-07 17:46:25,823 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:25,824 - INFO - Progress: 3480/3648 (95.4%) - ETA: 0.3 minutes
+2025-09-07 17:46:28,860 - INFO - 
+--- Scraping Page 117 ---
+2025-09-07 17:46:28,873 - INFO - Found 30 rows on current page
+2025-09-07 17:46:29,537 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:29,537 - INFO - Progress: 3510/3648 (96.2%) - ETA: 0.3 minutes
+2025-09-07 17:46:32,579 - INFO - 
+--- Scraping Page 118 ---
+2025-09-07 17:46:32,595 - INFO - Found 30 rows on current page
+2025-09-07 17:46:33,243 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:33,243 - INFO - Progress: 3540/3648 (97.0%) - ETA: 0.2 minutes
+2025-09-07 17:46:36,287 - INFO - 
+--- Scraping Page 119 ---
+2025-09-07 17:46:36,302 - INFO - Found 30 rows on current page
+2025-09-07 17:46:36,955 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:36,955 - INFO - Progress: 3570/3648 (97.9%) - ETA: 0.2 minutes
+2025-09-07 17:46:40,000 - INFO - 
+--- Scraping Page 120 ---
+2025-09-07 17:46:40,010 - INFO - Found 30 rows on current page
+2025-09-07 17:46:40,678 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:40,678 - INFO - Progress: 3600/3648 (98.7%) - ETA: 0.1 minutes
+2025-09-07 17:46:43,722 - INFO - 
+--- Scraping Page 121 ---
+2025-09-07 17:46:43,737 - INFO - Found 30 rows on current page
+2025-09-07 17:46:44,398 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 17:46:44,398 - INFO - Progress: 3630/3648 (99.5%) - ETA: 0.0 minutes
+2025-09-07 17:46:47,443 - INFO - 
+--- Scraping Page 122 ---
+2025-09-07 17:46:47,456 - INFO - Found 18 rows on current page
+2025-09-07 17:46:47,867 - INFO - Successfully extracted 18 valid rows from current page
+2025-09-07 17:46:47,867 - INFO - Progress: 3648/3648 (100.0%) - ETA: 0.0 minutes
+2025-09-07 17:46:47,872 - INFO - Reached the last page
+2025-09-07 17:46:47,872 - INFO - 
+Scraping completed! Total records scraped: 3648
+2025-09-07 17:46:47,880 - INFO - Successfully saved 3648 records to data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 17:46:47,880 - INFO - Data saved successfully!
+2025-09-07 17:46:47,883 - INFO - Loaded existing data: 3648 records from data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 17:46:47,885 - INFO - Final dataset summary: {'total_records': 3648, 'latest_date': '2025/09/06', 'oldest_date': '2011/11/26', 'date_range': '2011/11/26 to 2025/09/06'}
+2025-09-07 17:46:48,001 - INFO - Chrome driver closed
+2025-09-07 18:50:59,412 - INFO - Loaded existing data: 3648 records from data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 18:50:59,413 - INFO - Existing data found. Running incremental update...
+2025-09-07 18:50:59,413 - INFO - Starting dollar scraper...
+2025-09-07 18:50:59,416 - INFO - Loaded existing data: 3648 records from data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 18:50:59,418 - INFO - Existing data summary: {'total_records': 3648, 'latest_date': '2025/09/06', 'oldest_date': '2011/11/26', 'date_range': '2011/11/26 to 2025/09/06'}
+2025-09-07 18:50:59,418 - INFO - Setting up Chrome driver...
+2025-09-07 18:50:59,418 - INFO - ====== WebDriver manager ======
+2025-09-07 18:50:59,583 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 18:50:59,627 - INFO - Get LATEST chromedriver version for google-chrome
+2025-09-07 18:50:59,669 - INFO - Driver [/Users/kooroshkz/.wdm/drivers/chromedriver/mac64/140.0.7339.80/chromedriver-mac-arm64/THIRD_PARTY_NOTICES.chromedriver] found in cache
+2025-09-07 18:51:00,861 - INFO - Navigating to https://www.tgju.org/profile/price_dollar_rl/history
+2025-09-07 18:51:04,602 - INFO - Total records available: 3648
+2025-09-07 18:51:04,602 - INFO - 
+--- Scraping Page 1 ---
+2025-09-07 18:51:04,610 - INFO - Found 30 rows on current page
+2025-09-07 18:51:05,235 - INFO - Successfully extracted 30 valid rows from current page
+2025-09-07 18:51:05,239 - INFO - Loaded existing data: 3648 records from data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 18:51:05,240 - INFO - Reached existing data. Stopping at 2025/09/06
+2025-09-07 18:51:05,242 - INFO - Loaded existing data: 3648 records from data/Dollar_Rial_Price_Dataset.csv
+2025-09-07 18:51:05,243 - INFO - 
+Scraping completed! Total records scraped: 0
+2025-09-07 18:51:05,243 - INFO - No new data to save
+2025-09-07 18:51:05,324 - INFO - Chrome driver closed

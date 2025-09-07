@@ -4,70 +4,63 @@ A comprehensive, daily-updated dataset of US Dollar to Iranian Rial exchange rat
 
 ## Dataset Overview
 
-- **Time Period**: November 27, 2011 - Present (continuously updated)
-- **Total Records**: 3,900+ daily price points
+- **Time Period**: November 26, 2011 - Present (continuously updated)
+- **Total Records**: 3,648+ daily price points
 - **Data Source**: TGJU.org (Tehran Gold & Jewelry Union)
 - **Update Frequency**: Daily (automated via GitHub Actions)
-- **Format**: CSV with proper date formatting and price structure
-- **Currencies**: Both Iranian Rial (IRR) and Toman datasets available
+- **Format**: CSV with proper date formatting and integer price structure
 
 ## Data Files
 
 ### Dollar_Rial_Price_Dataset.csv
-Contains exchange rates in Iranian Rials (official currency)
-
-### Dollar_Toman_Price_Dataset.csv  
-Contains exchange rates in Iranian Tomans (1 Toman = 10 Rials)
+Contains exchange rates in Iranian Rials with historical data spanning over 14 years.
 
 ## Data Structure
 
-Each CSV file contains the following columns:
+The CSV file contains the following columns:
 
 | Column | Description | Format | Example |
 |--------|-------------|--------|---------|
-| Date | Gregorian date | DD/MM/YYYY | "31/07/2025" |
-| Persian_Date | Persian/Shamsi date | YYYY/MM/DD | "1404/05/09" |
-| Open | Opening price | Formatted number | "896,100" |
-| Low | Lowest price of the day | Formatted number | "895,700" |
-| High | Highest price of the day | Formatted number | "908,850" |
-| Close | Closing price | Formatted number | "905,600" |
+| Open Price | Opening price of the day | Integer | 1012100 |
+| Low Price | Lowest price of the day | Integer | 1011700 |
+| High Price | Highest price of the day | Integer | 1034100 |
+| Close Price | Closing price of the day | Integer | 1029800 |
+| Change Amount | Price change amount | String | 15400 |
+| Change Percent | Price change percentage | String | 1.52% |
+| Gregorian Date | Gregorian date | YYYY/MM/DD | 2025/09/06 |
+| Persian Date | Persian/Shamsi date | YYYY/MM/DD | 1404/06/15 |
 
 ## Using the Dataset
 
 ### Download the Data
-You can access the dataset files directly from the `/data/` directory:
+You can access the dataset file directly from the `/data/` directory:
 - [Dollar_Rial_Price_Dataset.csv](data/Dollar_Rial_Price_Dataset.csv)
-- [Dollar_Toman_Price_Dataset.csv](data/Dollar_Toman_Price_Dataset.csv)
 
 ### Loading in Python
 ```python
 import pandas as pd
 
-# Load Rial dataset
-rial_df = pd.read_csv('data/Dollar_Rial_Price_Dataset.csv')
-
-# Load Toman dataset  
-toman_df = pd.read_csv('data/Dollar_Toman_Price_Dataset.csv')
+# Load dataset
+df = pd.read_csv('data/Dollar_Rial_Price_Dataset.csv')
 
 # Convert date column to datetime
-rial_df['Date'] = pd.to_datetime(rial_df['Date'], format='%d/%m/%Y')
+df['Gregorian Date'] = pd.to_datetime(df['Gregorian Date'], format='%Y/%m/%d')
 
-# Remove commas from price columns and convert to numeric
-price_columns = ['Open', 'Low', 'High', 'Close']
-for col in price_columns:
-    rial_df[col] = pd.to_numeric(rial_df[col].str.replace(',', ''))
+# Price columns are already integers
+price_columns = ['Open Price', 'Low Price', 'High Price', 'Close Price']
+print(df[price_columns].dtypes)  # All should be int64
 ```
 
 ### Loading in R
 ```r
-# Load Rial dataset
-rial_data <- read.csv("data/Dollar_Rial_Price_Dataset.csv", stringsAsFactors = FALSE)
-
-# Load Toman dataset
-toman_data <- read.csv("data/Dollar_Toman_Price_Dataset.csv", stringsAsFactors = FALSE)
+# Load dataset
+data <- read.csv("data/Dollar_Rial_Price_Dataset.csv", stringsAsFactors = FALSE)
 
 # Convert date column
-rial_data$Date <- as.Date(rial_data$Date, format = "%d/%m/%Y")
+data$Gregorian.Date <- as.Date(data$Gregorian.Date, format = "%Y/%m/%d")
+
+# View structure
+str(data)
 ```
 
 ## Data Quality & Updates
@@ -76,6 +69,7 @@ rial_data$Date <- as.Date(rial_data$Date, format = "%d/%m/%Y")
 - **Automated Updates**: Dataset is automatically updated daily at 8:00 AM UTC
 - **Data Integrity**: Built-in duplicate prevention and format validation
 - **Historical Consistency**: Maintains consistent formatting across all time periods
+- **Integer Prices**: All price values stored as integers for precise calculations
 
 ## Technical Implementation
 
@@ -85,34 +79,6 @@ This dataset is maintained using an automated web scraping system that:
 - Validates and processes new records
 - Maintains data consistency and prevents duplicates
 - Automatically commits updates to the repository
-
-### Automation Details
-- **Platform**: GitHub Actions
-- **Schedule**: Daily at 8:00 AM UTC
-- **Browser**: Chrome with Selenium WebDriver
-- **Reliability**: Comprehensive error handling and retry logic
-
-## Research Applications
-
-This dataset is suitable for:
-
-- **Financial Analysis**: Track USD/IRR exchange rate trends and volatility
-- **Economic Research**: Study the impact of economic events on currency values  
-- **Machine Learning**: Build predictive models for exchange rate forecasting
-- **Time Series Analysis**: Analyze patterns and seasonal trends
-- **Academic Projects**: Research on emerging market currencies
-
-## Data Formats
-
-### CSV Format
-- **Encoding**: UTF-8
-- **Delimiter**: Comma (,)
-- **Quotes**: Double quotes for all fields
-- **Numbers**: Formatted with commas as thousand separators
-
-### Date Formats
-- **Gregorian**: DD/MM/YYYY (e.g., 31/07/2025)
-- **Persian**: YYYY/MM/DD (e.g., 1404/05/09)
 
 ## Contributing
 
@@ -131,6 +97,7 @@ Dollar-Rial-Toman Live Price Dataset
 Author: Koorosh Komeili Zadeh
 Source: https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset
 Data Source: TGJU.org (Tehran Gold & Jewelry Union)
+Date Range: November 2011 - Present
 ```
 
 ## Disclaimer
