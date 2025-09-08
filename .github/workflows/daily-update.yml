@@ -154,6 +154,47 @@ jobs:
         fi
 
         git push
+
+    - name: Commit run log when no new data
+      if: steps.check-changes.outputs.CHANGES_DETECTED != 'true'
+      env:
+        COMMIT_USER_NAME: ${{ secrets.COMMIT_USER_NAME }}
+        COMMIT_USER_EMAIL: ${{ secrets.COMMIT_USER_EMAIL }}
+        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      run: |
+        echo "=== Writing run log (no new data) ==="
+        mkdir -p logs
+        echo "$(date -u +'%Y-%m-%d %H:%M:%S') UTC - No new data. Total records: $EXISTING_RECORDS" >> logs/update.log
+
+        # Configure git identity
+        if [ -n "$COMMIT_USER_NAME" ] && [ -n "$COMMIT_USER_EMAIL" ]; then
+          git config --local user.name "$COMMIT_USER_NAME"
+          git config --local user.email "$COMMIT_USER_EMAIL"
+        else
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action - Daily Update"
+        fi
+
+        export GIT_AUTHOR_NAME="$(git config user.name)"
+        export GIT_AUTHOR_EMAIL="$(git config user.email)"
+        export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+        export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+
+        git add logs/update.log
+
+        # Only commit if the log actually changed (avoid empty commits)
+        if ! git diff --cached --quiet; then
+          COMMIT_MSG="Chore: daily run (no new data) - $(date -u +'%Y-%m-%d')"
+          git commit -m "$COMMIT_MSG"
+
+          if [ -n "$PERSONAL_ACCESS_TOKEN" ]; then
+            git remote set-url origin https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/${{ github.repository }}.git
+          fi
+
+          git push
+        else
+          echo "No change to logs/update.log; skipping commit."
+        fi
         
     - name: Create update summary
       run: |
