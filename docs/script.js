@@ -177,6 +177,9 @@ async function loadData() {
     console.log('Hiding loading indicator...');
     hideLoading();
     
+    console.log('Making data globally accessible...');
+    window.allData = allData;
+    
     console.log('✅ Data loading complete');
 }
 
@@ -342,6 +345,26 @@ function updateChart(data) {
     // Fit content to show all data
     chart.timeScale().fitContent();
     console.log('✅ Chart updated successfully');
+    
+    // Trigger technical analysis update
+    console.log('Triggering technical analysis update...');
+    if (window.technicalAnalysis) {
+        console.log('Technical analysis found, setting data...');
+        window.technicalAnalysis.setData(data);
+    } else {
+        console.log('Technical analysis not ready, will retry...');
+        setTimeout(() => {
+            if (window.technicalAnalysis) {
+                console.log('Technical analysis ready on retry, setting data...');
+                window.technicalAnalysis.setData(data);
+            }
+        }, 1000);
+    }
+    
+    // Update technical analysis if available
+    if (window.technicalAnalysis) {
+        window.technicalAnalysis.setData(data);
+    }
 }
 
 // Setup event listeners

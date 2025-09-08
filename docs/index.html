@@ -75,6 +75,88 @@
             </div>
         </section>
 
+        <!-- Technical Analysis Section -->
+        <section class="technical-analysis-section">
+            <div class="ta-header">
+                <h2>Technical Analysis</h2>
+                <div class="timeframe-controls">
+                    <button class="timeframe-btn" data-timeframe="day">1 Day</button>
+                    <button class="timeframe-btn active" data-timeframe="week">1 Week</button>
+                    <button class="timeframe-btn" data-timeframe="month">1 Month</button>
+                </div>
+            </div>
+            
+            <div class="indicators-grid">
+                <!-- Moving Average Indicator -->
+                <div class="indicator-card">
+                    <h3>Moving Average (MA)</h3>
+                    <div class="speedometer-container">
+                        <canvas id="maSpeedometer" width="200" height="150"></canvas>
+                        <div class="indicator-signal" id="maSignal">-</div>
+                    </div>
+                </div>
+
+                <!-- RSI Indicator -->
+                <div class="indicator-card">
+                    <h3>Relative Strength Index</h3>
+                    <div class="speedometer-container">
+                        <canvas id="rsiSpeedometer" width="200" height="150"></canvas>
+                        <div class="indicator-signal" id="rsiSignal">-</div>
+                    </div>
+                </div>
+
+                <!-- MACD Indicator -->
+                <div class="indicator-card">
+                    <h3>MA Convergence Divergence</h3>
+                    <div class="speedometer-container">
+                        <canvas id="macdSpeedometer" width="200" height="150"></canvas>
+                        <div class="indicator-signal" id="macdSignal">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ta-summary">
+                <!-- Oscillators and Moving Averages Summary -->
+                <div class="indicators-summary">
+                    <div class="summary-grid">
+                        <!-- Oscillators Section -->
+                        <div class="summary-section">
+                            <h3>Oscillators</h3>
+                            <div class="summary-signal" id="oscillatorsSignal">
+                                <span class="signal-text">NEUTRAL</span>
+                                <div class="signal-count" id="oscillatorsCount">0 Buy, 0 Sell, 0 Neutral</div>
+                            </div>
+                            <div class="indicators-list" id="oscillatorsList">
+                                <!-- Oscillators will be populated here -->
+                            </div>
+                            <button class="show-more-btn" id="showMoreOscillators" style="display: none;">Show More</button>
+                        </div>
+
+                        <!-- Moving Averages Section -->
+                        <div class="summary-section">
+                            <h3>Moving Averages</h3>
+                            <div class="summary-signal" id="movingAveragesSignal">
+                                <span class="signal-text">NEUTRAL</span>
+                                <div class="signal-count" id="movingAveragesCount">0 Buy, 0 Sell, 0 Neutral</div>
+                            </div>
+                            <div class="indicators-list" id="movingAveragesList">
+                                <!-- Moving averages will be populated here -->
+                            </div>
+                            <button class="show-more-btn" id="showMoreMA" style="display: none;">Show More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overall-signal">
+                    <h3>Overall </h3>
+                    <div class="signal-indicator" id="overallSignal">
+                        <span class="signal-text">Calculating...</span>
+                        <div class="signal-strength" id="signalStrength"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Dataset Info Section -->
         <section class="info-section">
             <div class="info-grid">
@@ -128,5 +210,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="ta.js"></script>
 </body>
 </html>
