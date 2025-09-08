@@ -16,7 +16,7 @@ def update_kaggle_dataset():
     api.authenticate()
     
     # Dataset configuration
-    dataset_slug = "your-username/dollar-rial-toman-live-price-dataset"  # UPDATE THIS
+    dataset_slug = "kooroshkz/dollar-rial-toman-live-price-dataset"
     
     # Create dataset metadata
     metadata = {
