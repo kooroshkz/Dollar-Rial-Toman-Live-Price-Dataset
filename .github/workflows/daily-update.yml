@@ -154,6 +154,21 @@ jobs:
         fi
 
         git push
+        
+    - name: Update Kaggle Dataset
+      if: steps.check-changes.outputs.CHANGES_DETECTED == 'true'
+      env:
+        KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+        KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        LATEST_ENTRY_DATE: ${{ steps.check-changes.outputs.LATEST_ENTRY_DATE }}
+      run: |
+        echo "=== Updating Kaggle Dataset ==="
+        if [ -n "$KAGGLE_USERNAME" ] && [ -n "$KAGGLE_KEY" ]; then
+          python3 scripts/update_kaggle.py
+        else
+          echo "⚠️ Kaggle credentials not found in secrets. Skipping Kaggle update."
+          echo "To enable Kaggle updates, add KAGGLE_USERNAME and KAGGLE_KEY to repository secrets."
+        fi
 
     - name: Commit run log when no new data
       if: steps.check-changes.outputs.CHANGES_DETECTED != 'true'
@@ -210,6 +225,11 @@ jobs:
           echo "- **Total Records**: ${{ steps.check-changes.outputs.NEW_RECORD_COUNT }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Latest Entry**: ${{ steps.check-changes.outputs.LATEST_ENTRY_DATE }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Data Source**: [tgju.org](https://www.tgju.org/profile/price_dollar_rl/history)" >> $GITHUB_STEP_SUMMARY
+          if [ -n "${{ secrets.KAGGLE_USERNAME }}" ]; then
+            echo "- **Kaggle**: Dataset updated ✅" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Kaggle**: Update skipped (credentials not configured)" >> $GITHUB_STEP_SUMMARY
+          fi
         else
           echo "### No New Data" >> $GITHUB_STEP_SUMMARY
           echo "No new exchange rate records were found since the last update." >> $GITHUB_STEP_SUMMARY
