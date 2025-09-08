@@ -138,7 +138,7 @@ body {
 .chart-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 500px; /* Back to normal height */
     background: #0d1117;
     border-radius: 8px;
     border: 1px solid #21262d;
@@ -183,6 +183,134 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Indicator Controls */
+.indicator-controls {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #30363d;
+}
+
+.indicator-controls h3 {
+    color: #f0f6fc;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.indicator-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.indicator-btn {
+    padding: 10px 18px;
+    background: #21262d;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    min-width: 80px;
+    text-align: center;
+}
+
+.indicator-btn:hover {
+    background: #30363d;
+    border-color: #58a6ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+.indicator-btn.active {
+    background: #58a6ff;
+    border-color: #58a6ff;
+    color: #0d1117;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+}
+
+.indicator-btn.active::after {
+    content: '✓';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #238636;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #0d1117;
+}
+
+/* Indicator Windows */
+.indicator-windows {
+    margin-top: 20px;
+}
+
+.indicator-window {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.indicator-window:hover {
+    border-color: #58a6ff;
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+.indicator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #21262d;
+    border-bottom: 1px solid #30363d;
+}
+
+.indicator-title {
+    color: #f0f6fc;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.indicator-value {
+    color: #58a6ff;
+    font-family: 'Consolas', monospace;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.indicator-chart {
+    height: 120px;
+    background: #0d1117;
+    position: relative;
+}
+
+.indicator-chart canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Indicator Controls */
 
 /* Data Section */
 .data-section {
@@ -794,7 +922,7 @@ body {
     }
     
     .chart-container {
-        height: 400px;
+        height: 400px; /* Normal mobile height */
     }
     
     .ta-header {
@@ -837,6 +965,16 @@ body {
     .container {
         padding: 15px;
     }
+    
+    .indicator-buttons {
+        gap: 8px;
+    }
+    
+    .indicator-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+        min-width: 70px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -845,7 +983,7 @@ body {
     }
     
     .chart-container {
-        height: 300px;
+        height: 300px; /* Smaller mobile height */
     }
     
     .chart-btn {
@@ -875,6 +1013,33 @@ body {
     .data-table td {
         padding: 8px;
         font-size: 0.8rem;
+    }
+    
+    .indicator-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        min-width: 60px;
+    }
+    
+    .indicator-controls h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .indicator-chart {
+        height: 100px;
+    }
+    
+    .indicator-header {
+        padding: 10px 12px;
+    }
+    
+    .indicator-title {
+        font-size: 0.8rem;
+    }
+    
+    .indicator-value {
+        font-size: 0.75rem;
     }
 }
 

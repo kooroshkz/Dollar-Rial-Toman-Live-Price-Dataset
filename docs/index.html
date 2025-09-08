@@ -51,6 +51,58 @@
                     <p>Loading chart data...</p>
                 </div>
             </div>
+            
+            <!-- Separate Indicator Windows -->
+            <div class="indicator-windows">
+                <!-- RSI Window -->
+                <div class="indicator-window" id="rsiWindow" style="display: none;">
+                    <div class="indicator-header">
+                        <span class="indicator-title">RSI (14)</span>
+                        <span class="indicator-value" id="rsiValue">--</span>
+                    </div>
+                    <div id="rsiChart" class="indicator-chart"></div>
+                </div>
+                
+                <!-- Stochastic Window -->
+                <div class="indicator-window" id="stochasticWindow" style="display: none;">
+                    <div class="indicator-header">
+                        <span class="indicator-title">Stochastic (14,3,3)</span>
+                        <span class="indicator-value" id="stochasticValue">--</span>
+                    </div>
+                    <div id="stochasticChart" class="indicator-chart"></div>
+                </div>
+                
+                <!-- Momentum Window -->
+                <div class="indicator-window" id="momentumWindow" style="display: none;">
+                    <div class="indicator-header">
+                        <span class="indicator-title">Momentum (10)</span>
+                        <span class="indicator-value" id="momentumValue">--</span>
+                    </div>
+                    <div id="momentumChart" class="indicator-chart"></div>
+                </div>
+                
+                <!-- MACD Window -->
+                <div class="indicator-window" id="macdWindow" style="display: none;">
+                    <div class="indicator-header">
+                        <span class="indicator-title">MACD (12,26,9)</span>
+                        <span class="indicator-value" id="macdValue">--</span>
+                    </div>
+                    <div id="macdChart" class="indicator-chart"></div>
+                </div>
+            </div>
+            
+            <!-- Indicator Controls -->
+            <div class="indicator-controls">
+                <h3>Technical Indicators</h3>
+                <div class="indicator-buttons">
+                    <button class="indicator-btn" data-indicator="rsi">RSI</button>
+                    <button class="indicator-btn" data-indicator="stochastic">Stochastic</button>
+                    <button class="indicator-btn" data-indicator="momentum">Momentum</button>
+                    <button class="indicator-btn" data-indicator="macd">MACD</button>
+                    <button class="indicator-btn" data-indicator="ichimoku">Ichimoku</button>
+                    <button class="indicator-btn" data-indicator="ema">EMA</button>
+                </div>
+            </div>
         </section>
 
         <!-- Recent Data Section -->
