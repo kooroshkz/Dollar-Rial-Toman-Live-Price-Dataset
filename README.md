@@ -2,6 +2,7 @@
 
 A comprehensive, daily-updated dataset of US Dollar to Iranian Rial exchange rates (USD/IRR) with historical data from November 2011 to present. This dataset is ideal for financial analysis, economic research, forecasting, and machine learning projects.
 
+
 ## Dataset Overview
 
 - **Time Period**: November 26, 2011 - Present (continuously updated)
@@ -9,11 +10,6 @@ A comprehensive, daily-updated dataset of US Dollar to Iranian Rial exchange rat
 - **Data Source**: TGJU.org (Tehran Gold & Jewelry Union)
 - **Update Frequency**: Daily (automated via GitHub Actions)
 - **Format**: CSV with proper date formatting and integer price structure
-
-## Data Files
-
-### Dollar_Rial_Price_Dataset.csv
-Contains exchange rates in Iranian Rials with historical data spanning over 14 years.
 
 ## Data Structure
 
@@ -30,11 +26,22 @@ The CSV file contains the following columns:
 | Gregorian Date | Gregorian date | YYYY/MM/DD | 2025/09/06 |
 | Persian Date | Persian/Shamsi date | YYYY/MM/DD | 1404/06/15 |
 
-## Using the Dataset
-
 ### Download the Data
 You can access the dataset file directly from the `/data/` directory:
 - [Dollar_Rial_Price_Dataset.csv](data/Dollar_Rial_Price_Dataset.csv)
+
+## View Live Dataset on Kaggle:
+This dataset is also available on [Kaggle](https://www.kaggle.com/datasets/kooroshkz/dollar-rial-toman-live-price-dataset) where you can 
+
+explore, download, and use it directly in Kaggle notebooks.
+
+## Documentation & Charts
+<a href="https://kooroshkz.github.io/Dollar-Rial-Toman-Live-Price-Dataset/" target="_blank">
+  <img width="1170" height="981" alt="image" src="https://github.com/user-attachments/assets/2425cb0d-59cb-4054-ba8d-0a2892040c79" />
+</a>
+
+Interactive charts and dataset overview are available at:  
+[kooroshkz.github.io/Dollar-Rial-Toman-Live-Price-Dataset](https://kooroshkz.github.io/Dollar-Rial-Toman-Live-Price-Dataset/)
 
 ### Loading in Python
 ```python
@@ -49,6 +56,21 @@ df['Gregorian Date'] = pd.to_datetime(df['Gregorian Date'], format='%Y/%m/%d')
 # Price columns are already integers
 price_columns = ['Open Price', 'Low Price', 'High Price', 'Close Price']
 print(df[price_columns].dtypes)  # All should be int64
+```
+
+### Direct Load in Python
+```python
+# pip install kagglehub[hf-datasets]
+import kagglehub
+
+df = kagglehub.load_dataset(
+    "kooroshkz/dollar-rial-toman-live-price-dataset",
+    adapter="huggingface",
+    file_path="Dollar_Rial_Price_Dataset.csv",
+    pandas_kwargs={"parse_dates": ["Gregorian Date"]}
+)
+
+print(df.head())
 ```
 
 ### Loading in R
@@ -99,6 +121,11 @@ Source: https://github.com/kooroshkz/Dollar-Rial-Toman-Live-Price-Dataset
 Data Source: TGJU.org (Tehran Gold & Jewelry Union)
 Date Range: November 2011 - Present
 ```
+
+### Keywords
+USD to Rial dataset, Dollar to Toman dataset, Iran exchange rate CSV, USD/IRR daily price, foreign exchange Iran dataset, TGJU data, time series currency dataset
+
+- Available in [English](README.md) | [فارسی](README.fa.md)
 
 ## Disclaimer
 
