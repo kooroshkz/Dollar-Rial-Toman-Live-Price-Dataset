@@ -37,7 +37,7 @@ explore, download, and use it directly in Kaggle notebooks.
 
 ## Documentation & Charts
 <a href="https://kooroshkz.github.io/Dollar-Rial-Toman-Live-Price-Dataset/" target="_blank">
-  <img width="1170" height="981" alt="image" src="https://github.com/user-attachments/assets/2425cb0d-59cb-4054-ba8d-0a2892040c79" />
+  <img width="1170" height="981" alt="image" src="./assets/img/IntractiveChart.png" />
 </a>
 
 Interactive charts and dataset overview are available at:  
