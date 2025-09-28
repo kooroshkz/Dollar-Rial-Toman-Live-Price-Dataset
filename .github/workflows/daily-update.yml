@@ -109,23 +109,28 @@ jobs:
           exit 1
         fi
         
+    - name: Choose commit identity (alternate daily)
+      run: |
+        DAY=$(date +%u) # 1=Monday ... 7=Sunday
+        if [ $((DAY % 2)) -eq 0 ]; then
+          echo "COMMIT_USER_NAME=kooroshkz" >> $GITHUB_ENV
+          echo "COMMIT_USER_EMAIL=your@email.com" >> $GITHUB_ENV
+          echo "COMMIT_TOKEN=${{ secrets.PERSONAL_ACCESS_TOKEN }}" >> $GITHUB_ENV
+          echo "Using Koorosh account"
+        else
+          echo "COMMIT_USER_NAME=GitHub Action Bot" >> $GITHUB_ENV
+          echo "COMMIT_USER_EMAIL=action@github.com" >> $GITHUB_ENV
+          echo "COMMIT_TOKEN=${{ secrets.GITHUB_TOKEN }}" >> $GITHUB_ENV
+          echo "Using GitHub Bot"
+        fi
+
     - name: Commit and push changes
       if: steps.check-changes.outputs.CHANGES_DETECTED == 'true'
-      env:
-        COMMIT_USER_NAME: ${{ secrets.COMMIT_USER_NAME }}
-        COMMIT_USER_EMAIL: ${{ secrets.COMMIT_USER_EMAIL }}
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         echo "=== Committing New Data ==="
 
-        # If commit name/email are provided via secrets, use them; otherwise use action identity
-        if [ -n "$COMMIT_USER_NAME" ] && [ -n "$COMMIT_USER_EMAIL" ]; then
-          git config --local user.name "$COMMIT_USER_NAME"
-          git config --local user.email "$COMMIT_USER_EMAIL"
-        else
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action - Daily Update"
-        fi
+        git config --local user.name "$COMMIT_USER_NAME"
+        git config --local user.email "$COMMIT_USER_EMAIL"
 
         # Ensure author/committer env vars match the configured git identity
         export GIT_AUTHOR_NAME="$(git config user.name)"
@@ -147,12 +152,7 @@ jobs:
 
         git commit -m "$COMMIT_MSG"
 
-        # If a personal access token is provided via secrets, use it to push so the commit is attributed to the token owner
-        if [ -n "$PERSONAL_ACCESS_TOKEN" ]; then
-          echo "Using personal access token to push as ${GIT_AUTHOR_NAME} <${GIT_AUTHOR_EMAIL}>"
-          git remote set-url origin https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/${{ github.repository }}.git
-        fi
-
+        git remote set-url origin https://x-access-token:$COMMIT_TOKEN@github.com/${{ github.repository }}.git
         git push
         
     - name: Update Kaggle Dataset
@@ -172,23 +172,13 @@ jobs:
 
     - name: Commit run log when no new data
       if: steps.check-changes.outputs.CHANGES_DETECTED != 'true'
-      env:
-        COMMIT_USER_NAME: ${{ secrets.COMMIT_USER_NAME }}
-        COMMIT_USER_EMAIL: ${{ secrets.COMMIT_USER_EMAIL }}
-        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       run: |
         echo "=== Writing run log (no new data) ==="
         mkdir -p logs
         echo "$(date -u +'%Y-%m-%d %H:%M:%S') UTC - No new data. Total records: $EXISTING_RECORDS" >> logs/update.log
 
-        # Configure git identity
-        if [ -n "$COMMIT_USER_NAME" ] && [ -n "$COMMIT_USER_EMAIL" ]; then
-          git config --local user.name "$COMMIT_USER_NAME"
-          git config --local user.email "$COMMIT_USER_EMAIL"
-        else
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action - Daily Update"
-        fi
+        git config --local user.name "$COMMIT_USER_NAME"
+        git config --local user.email "$COMMIT_USER_EMAIL"
 
         export GIT_AUTHOR_NAME="$(git config user.name)"
         export GIT_AUTHOR_EMAIL="$(git config user.email)"
@@ -202,15 +192,13 @@ jobs:
           COMMIT_MSG="Chore: daily run (no new data) - $(date -u +'%Y-%m-%d')"
           git commit -m "$COMMIT_MSG"
 
-          if [ -n "$PERSONAL_ACCESS_TOKEN" ]; then
-            git remote set-url origin https://x-access-token:$PERSONAL_ACCESS_TOKEN@github.com/${{ github.repository }}.git
-          fi
-
+          git remote set-url origin https://x-access-token:$COMMIT_TOKEN@github.com/${{ github.repository }}.git
           git push
         else
           echo "No change to logs/update.log; skipping commit."
         fi
-        
+
+
     - name: Create update summary
       run: |
         echo "## Daily USD/IRR Exchange Rate Update" >> $GITHUB_STEP_SUMMARY
