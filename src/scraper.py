@@ -42,15 +42,28 @@ class DollarScraper:
             chrome_options.add_argument(option)
         
         try:
-            # Try to install and use ChromeDriverManager
+            # Use ChromeDriverManager to ensure we get the correct version
+            self.logger.info("====== WebDriver manager ======")
             driver_path = ChromeDriverManager().install()
+            self.logger.info(f"Using ChromeDriver at: {driver_path}")
+            
             service = Service(driver_path)
-            return webdriver.Chrome(service=service, options=chrome_options)
-        except Exception:
-            # Fallback to system Chrome driver without showing warning
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            
+            # Log successful initialization
+            self.logger.info("Chrome driver initialized successfully")
+            return driver
+            
+        except Exception as e:
+            self.logger.error(f"Failed to initialize Chrome driver: {str(e)}")
+            # Try fallback without service (system chromedriver)
             try:
-                return webdriver.Chrome(options=chrome_options)
-            except Exception as e:
+                self.logger.info("Attempting fallback to system ChromeDriver")
+                driver = webdriver.Chrome(options=chrome_options)
+                self.logger.info("Fallback Chrome driver initialized successfully")
+                return driver
+            except Exception as fallback_error:
+                self.logger.error(f"Fallback also failed: {str(fallback_error)}")
                 raise RuntimeError(f"Failed to initialize Chrome driver: {str(e)}")
     
     def _wait_for_element(self, selector: str, timeout: int = 10):

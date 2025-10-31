@@ -40,7 +40,14 @@ jobs:
         echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
         sudo apt-get update
         sudo apt-get install -y google-chrome-stable
-        
+
+    - name: Remove old ChromeDriver from PATH
+      run: |
+        # Remove any existing chromedriver from PATH to avoid conflicts
+        sudo rm -f /usr/bin/chromedriver
+        sudo rm -f /usr/local/bin/chromedriver
+        echo "Removed old ChromeDriver installations"
+
     - name: Verify Chrome installation
       run: |
         google-chrome --version
